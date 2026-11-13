@@ -1,9 +1,11 @@
 import importlib.util
 import os
+import sys
 from pathlib import Path
 import tempfile
 import unittest
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'espscripts'))
 spec = importlib.util.spec_from_file_location('espscripts', Path(__file__).resolve().parents[1] / 'espscripts/app.py')
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)

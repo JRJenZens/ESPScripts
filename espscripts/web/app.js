@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
 const form = $('form'), modal = $('editor');
 const statuses = {tested:'Testet',untested:'Ikke testet',issues:'Har problemer'};
 const kinds = {block:'Sensorblok',complete:'Komplet opsætning',standard:'Standardprint'};
-let entries = [], current = null, dirty = false, catalog = {boards:[],sensors:[]}, view='library', stage=1, catalogLimit=60, pickerKind='boards', pickerLimit=60, catalogEditing=null;
+let entries = [], current = null, dirty = false, catalog = {boards:[],sensors:[]}, view='library', stage=1, catalogLimit=60, pickerKind='boards', pickerLimit=60, catalogEditing=null,catalogMeta={},importMatch=null;
 function el(tag, text, cls) { const n=document.createElement(tag); if(text!==undefined)n.textContent=text; if(cls)n.className=cls; return n; }
 async function api(path,method='GET',body) {
  const response=await fetch('api/'+path,{method,headers:{'Content-Type':'application/json','X-ESPScripts':'1'},body:body===undefined?undefined:JSON.stringify(body)});
@@ -61,7 +61,7 @@ function stats(){
 function hardwareArt(kind,family=''){
  const art=el('div',undefined,'card-art'+(kind==='sensors'?' sensor-art':'')),img=el('img');img.src=kind==='boards'?'static/board.svg':'static/sensor.svg';img.alt='';art.append(img);if(family)art.append(el('span',family,'family'));return art;
 }
-function boardOptions(){const list=$('board-options');list.replaceChildren();for(const b of catalog.boards){list.append(new Option(b.category||'',b.name));}}
+function boardOptions(){const list=$('board-options');list.replaceChildren();for(const b of catalog.boards.filter(b=>b.hardware_type!=='expansion')){list.append(new Option(b.category||'',b.name));}}
 function switchView(next){
  view=next;for(const k of ['library','standards','boards','sensors']){const n=$('nav-'+k);n.classList.toggle('active',k===view);if(k===view)n.setAttribute('aria-current','page');else n.removeAttribute('aria-current');}
  $('library-view').hidden=view!=='library';$('catalog-view').hidden=!['boards','sensors'].includes(view);$('standards-view').hidden=view!=='standards';if(view==='standards')standardsRender();
@@ -79,11 +79,11 @@ function catalogRender(){
  const area=$('catalog-cards');area.replaceChildren();$('catalog-count').textContent=`${items.length} ${view==='boards'?'boards':'sensorkomponenter'} · viser ${Math.min(catalogLimit,items.length)}`;
  if(!items.length){const empty=el('div',undefined,'empty');empty.append(el('h3','Mangler din model?'),el('p','Tilføj den til dit eget katalog. Den er klar til brug med det samme.'));const b=el('button','＋ Tilføj model','primary');b.onclick=()=>catalogEdit();empty.append(b);area.append(empty);}
  for(const item of items.slice(0,catalogLimit)){
-  const n=el('article',undefined,'card'),body=el('div',undefined,'card-body'),meta=el('div',undefined,'meta');meta.append(el('span',item.category||'Egen model','badge'));if(item.custom)meta.append(el('span','Egen model','badge custom'));
-  body.append(meta,el('h3',item.name),el('p',item.detail||'Egen katalogpost'));
+  const n=el('article',undefined,'card'),body=el('div',undefined,'card-body'),meta=el('div',undefined,'meta');meta.append(el('span',item.category||'Egen model','badge'));if(item.custom)meta.append(el('span','Egen model','badge custom'));if(item.hardware_type==='expansion')meta.append(el('span','Udvidelsesboard','badge expansion'));
+  body.append(meta,el('h3',item.name),el('p',item.detail||'Egen katalogpost'));if(item.description)body.append(el('p',item.description,'card-description'));
   if(item.docs_url){const link=el('a','Dokumentation ↗');link.href=item.docs_url;link.target='_blank';link.rel='noopener noreferrer';body.append(link);}
-  const bottom=el('div',undefined,'card-bottom'),use=el('button',view==='boards'?'Brug board →':'Brug sensor →');use.onclick=()=>{edit();if(view==='boards')form.elements.board.value=item.name;else form.elements.sensors.value=sensorLabel(item);syncSensors();dirty=true;};bottom.append(use);
-  if(item.custom){const b=el('button','Redigér');b.onclick=()=>catalogEdit(item);bottom.append(b);}body.append(bottom);n.append(hardwareArt(view,item.category),body);area.append(n);
+  const bottom=el('div',undefined,'card-bottom'),use=el('button',item.hardware_type==='expansion'?'Brug som modul →':(view==='boards'?'Brug board →':'Brug sensor →'));use.onclick=()=>{edit();if(view==='boards'&&item.hardware_type!=='expansion')form.elements.board.value=item.name;else form.elements.sensors.value=sensorLabel(item);syncSensors();dirty=true;};bottom.append(use);
+  if(item.custom){const b=el('button','Redigér');b.onclick=()=>catalogEdit(item);bottom.append(b);}body.append(bottom);n.append(hardwareArt(item.hardware_type==='expansion'?'sensors':view,item.category),body);area.append(n);
  }
  if(items.length>catalogLimit){const more=el('button','Vis flere modeller ↓');more.onclick=()=>{catalogLimit+=60;catalogRender();};area.append(more);}
 }
@@ -93,7 +93,8 @@ function syncSensors(){
 }
 function openPicker(kind){pickerKind=kind;pickerLimit=60;$('picker-search').value='';$('picker-title').textContent=kind==='boards'?'Vælg dit ESP32-board':'Vælg én eller flere sensorer';pickerRender();$('picker').showModal();}
 function pickerRender(){
- const q=$('picker-search').value.trim().toLocaleLowerCase('da'),items=catalog[pickerKind].filter(x=>[x.name,x.category,x.detail].join(' ').toLocaleLowerCase('da').includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'da'));
+ const pool=pickerKind==='boards'?catalog.boards.filter(x=>x.hardware_type!=='expansion'):[...catalog.sensors,...catalog.boards.filter(x=>x.hardware_type==='expansion')];
+ const q=$('picker-search').value.trim().toLocaleLowerCase('da'),items=pool.filter(x=>[x.name,x.category,x.detail].join(' ').toLocaleLowerCase('da').includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'da'));
  const area=$('picker-items');area.replaceChildren();$('picker-count').textContent=`${items.length} modeller fundet`;
  for(const item of items.slice(0,pickerLimit)){
   const selected=pickerKind==='boards'?form.elements.board.value===item.name:tokens(form.elements.sensors.value).includes(sensorLabel(item));
@@ -103,10 +104,17 @@ function pickerRender(){
  if(!items.length)area.append(el('p','Ingen match. Du kan skrive din model direkte i opsætningen eller tilføje den under Boards / Sensorer.','hint'));
  if(items.length>pickerLimit){const b=el('button','Vis flere modeller ↓');b.onclick=()=>{pickerLimit+=60;pickerRender();};area.append(b);}
 }
-function catalogEdit(item=null){catalogEditing=item;const f=$('catalog-form');f.reset();$('catalog-error').textContent='';$('catalog-editor-title').textContent=(item?'Redigér ':'Tilføj ')+(view==='boards'?'board':'sensor');if(item)for(const k of ['name','category','detail','docs_url'])f.elements[k].value=item[k]||'';$('catalog-editor').showModal();}
+function catalogEdit(item=null,draft=null){
+ catalogEditing=item;const data=item||draft,catalogKind=data?.kind||view;catalogMeta=data?.esphome||{};const f=$('catalog-form');f.reset();$('catalog-error').textContent='';$('catalog-editor-title').textContent=draft?'Kontrollér model fra link':(item?'Redigér ':'Tilføj ')+(catalogKind==='boards'?'board':'sensor');
+ f.elements.hardware_type.value=data?.hardware_type||(catalogKind==='sensors'?'sensor':'other');
+ if(data)for(const k of ['name','category','detail','docs_url','description'])f.elements[k].value=data[k]||'';
+ $('catalog-import-notice').hidden=!draft;if(draft)$('catalog-import-notice').textContent='Forslag fra produktsiden. Kontrollér hardwaretype og felter før du gemmer. ESPHome-understøttelse og fysisk test er ikke bekræftet.';
+ $('catalog-existing').hidden=!draft||!importMatch;if(draft&&importMatch)$('catalog-existing-text').textContent='Vi fandt en eksisterende model: '+importMatch.name+'. Brug den, eller gem oplysningerne som din egen udgave.';
+ $('catalog-editor').showModal();
+}
 $('catalog-form').onsubmit=async e=>{
  e.preventDefault();const submit=e.submitter;submit.disabled=true;$('catalog-error').textContent='';
- try{const data=Object.fromEntries(new FormData($('catalog-form')));data.kind=catalogEditing?.kind||view;if(catalogEditing)data.version=catalogEditing.version;await api('catalog'+(catalogEditing?'/'+catalogEditing.id:''),catalogEditing?'PUT':'POST',data);$('catalog-editor').close();$('catalog-search').value='';$('catalog-source').value='custom';$('catalog-category').value='';await refresh();catalogCategories();catalogRender();}catch(e){$('catalog-error').textContent=e.message;}finally{submit.disabled=false;}
+ try{const data=Object.fromEntries(new FormData($('catalog-form')));data.kind=data.hardware_type==='sensor'?'sensors':'boards';data.esphome=data.hardware_type==='esp32'?{...catalogMeta}:{};if(data.esphome.board&&data.detail!==data.esphome.board)data.esphome.board=data.detail;if(data.hardware_type==='esp32'){const variant=data.category.toLowerCase().replaceAll('-','').replaceAll(' ','');if(/^esp32(?:c[2356]|c61|s[23]|h2|p4)?$/.test(variant))data.esphome.variant=variant;else delete data.esphome.variant;}if(catalogEditing)data.version=catalogEditing.version;await api('catalog'+(catalogEditing?'/'+catalogEditing.id:''),catalogEditing?'PUT':'POST',data);$('catalog-editor').close();switchView(data.kind);$('catalog-search').value='';$('catalog-source').value='custom';$('catalog-category').value='';await refresh();catalogCategories();catalogRender();}catch(e){$('catalog-error').textContent=e.message;}finally{submit.disabled=false;}
 };
 for(const k of ['library','boards','sensors']){$('nav-'+k).onclick=()=>switchView(k);$('stat-'+k).onclick=()=>switchView(k);}
 for(const id of ['catalog-search','catalog-category','catalog-source'])$(id).addEventListener('input',()=>{catalogLimit=60;catalogRender();});
@@ -136,3 +144,17 @@ $('standard-form').onsubmit=e=>{
  $('standard-generator').close();if(!generatorInEditor)edit();form.elements.yaml.value=yaml;form.elements.kind.value='complete';if(!form.elements.name.value.trim())form.elements.name.value=d.friendly_name;if(!form.elements.board.value.trim())form.elements.board.value=d.variant.toUpperCase().replace('ESP32','ESP32-').replace(/-$/,'');form.elements.status.value='untested';form.elements.tested_on.value='';form.elements.change_note.value='Oprettet fra standardprint';dirty=true;setStage(2);
 };
 $('nav-standards').onclick=()=>switchView('standards');$('standard-close').onclick=()=>$('standard-generator').close();$('insert-standard').onclick=()=>openStandard(null,true);$('new-standard').onclick=async()=>{try{edit();form.elements.name.value='Mit standardprint';form.elements.kind.value='standard';form.elements.yaml.value=await loadStandard();dirty=true;setStage(2);}catch(e){error(e);}};
+
+function openLinkImport(){
+ $('link-form').reset();$('link-error').textContent='';$('link-progress').hidden=true;$('link-fetch').disabled=false;$('link-importer').showModal();
+}
+$('import-link').onclick=openLinkImport;$('import-link-catalog').onclick=openLinkImport;$('link-close').onclick=()=>$('link-importer').close();
+$('example-mmwave').onclick=()=>{$('link-form').elements.url.value='https://wiki.seeedstudio.com/mmwave_for_xiao/';};
+$('example-xiao').onclick=()=>{$('link-form').elements.url.value='https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/';};
+let linkRequest=0;
+$('link-form').onsubmit=async e=>{
+ e.preventDefault();const requestNumber=++linkRequest;$('link-fetch').disabled=true;$('link-progress').hidden=false;$('link-error').textContent='';
+ try{const result=await api('catalog/preview-link','POST',{url:$('link-form').elements.url.value.trim()});if(requestNumber!==linkRequest||!$('link-importer').open)return;importMatch=result.existing;const draft=result.draft;if(importMatch&&importMatch.name.toLocaleLowerCase('da')===draft.name.toLocaleLowerCase('da'))draft.name+=' (egen udgave)';$('link-importer').close();catalogEdit(null,draft);}catch(e){if(requestNumber===linkRequest)$('link-error').textContent=e.message;}finally{if(requestNumber===linkRequest){$('link-fetch').disabled=false;$('link-progress').hidden=true;}}
+};
+$('link-importer').addEventListener('close',()=>{linkRequest++;});
+$('use-existing').onclick=()=>{if(!importMatch)return;const match=importMatch;$('catalog-editor').close();switchView(match.kind);$('catalog-search').value=match.name;catalogRender();};

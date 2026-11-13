@@ -20,6 +20,29 @@ Kræver Home Assistant OS eller en installation med Supervisor. Understøtter am
 
 Appen bruger Home Assistants Ingress og login. Ingen separat port eller adgangskode skal konfigureres. Biblioteket er fælles for HA-administratorer med adgang til appen; det har ikke separate brugerbiblioteker.
 
+## Nyt i 0.3.0: import fra produktlink
+
+Vælg **Fra produktlink** på forsiden eller under Boards/Sensorer:
+
+1. Indsæt et offentligt HTTPS-link til en produkt- eller dokumentationsside.
+2. Vælg **Hent forslag fra link**. Appen foreslår navn, hardwaretype, chipfamilie/tilslutning, beskrivelse og dokumentationslink.
+3. Kontrollér og ret oplysningerne, og vælg **Gem i kataloget**. Først her gemmes posten lokalt, og den kommer med i backup.
+
+Der skelnes mellem **ESP32-board**, **udvidelsesboard/shield**, **sensor/sensormodul** og **andet board**. Udvidelsesboards gemmes under Boards og kan tilføjes som moduler i en opsætning sammen med et separat ESP32-board. De er også tilgængelige i sensorvælgeren. De vælges ikke som selve ESP32-boardet.
+
+Eksempler, afprøvet med de rigtige sider:
+
+- [24GHz mmWave for XIAO](https://wiki.seeedstudio.com/mmwave_for_xiao/): foreslås som et udvidelsesboard med UART. Der gættes ikke på et ESP32-board-ID.
+- [Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/): foreslås som et ESP32-C3-board. Importen finder også det eksisterende katalogmatch, hvorfra board-ID og ESPHome-metadata kan genbruges.
+
+Når en model allerede findes, vises et match: vælg **Vis eksisterende model** eller gem en egen udgave med et særskilt navn. Importerede ESP32-metadata kan derefter bruges til at foreslå chipvarianten i Standardprint.
+
+Importen bruger sidens titel, metadata og tekst til at lave et **forslag**, ikke en komplet teknisk specifikation. Board-ID og komponent-ID udfyldes kun ved et eksisterende katalogmatch; ukendte komponenter skal angives manuelt. Importen henter ikke produktbilleder, pinouts, YAML eller de sider, der linkes til. Sidens tekst behandles som data. ESPHome-understøttelse og fysisk test bekræftes ikke af en produktimport.
+
+Sider, der kræver login, JavaScript, botkontrol eller særlige browsercookies, kan ikke altid importeres. Brug i så fald **Tilføj eget board/sensor**. Der understøttes offentlige HTTPS-sider på port 443, højst 1,5 MB, med begrænset svartid og viderestillinger; lokale/private netværksadresser og PDF-filer accepteres ikke. Appen sender ikke HA-token, cookies eller bibliotekets indhold til produktsiden.
+
+Opdatér til **0.3.0** fra HA-appbutikken. Eksisterende data bevares, og backupformat 1 og 2 er fortsat understøttet. Tag backup før opdatering.
+
 ## Nyt i 0.2.0
 
 - Grafisk værkstedsoversigt, hardwarekort og et guidet oprettelsesforløb med Hardware → YAML → Test og noter.
@@ -84,7 +107,7 @@ Når du genbruger en opsætning, vælg **Gem som kopi**, tilpas navn, GPIO og ø
 
 SQLite-databasen gemmes i appens vedvarende `/data/espscripts.sqlite3` og indgår i en HA-backup, **når ESPScripts er valgt med i backupen**. Tag desuden JSON-backup fra biblioteket før større ændringer. JSON-import har en grænse på 32 MiB; YAML-import 500 kB. Biblioteket er tomt ved første start.
 
-Brug `!secret`-referencer; gem ikke `secrets.yaml`, rigtige Wi-Fi-adgangskoder eller API-nøgler i biblioteket. JSON-backup indeholder hele bibliotekets indhold og skal opbevares derefter. Der er ingen cloudsynkronisering eller upload af biblioteket til GitHub. GitHub indeholder kun appens kildekode.
+Brug `!secret`-referencer; gem ikke `secrets.yaml`, rigtige Wi-Fi-adgangskoder eller API-nøgler i biblioteket. JSON-backup indeholder hele bibliotekets indhold og skal opbevares derefter. Der er ingen cloudsynkronisering eller upload af biblioteket til GitHub. Linkimport kontakter kun den angivne offentlige produktside og dens eventuelle offentlige HTTPS-viderestillinger. GitHub indeholder kun appens kildekode.
 
 ## Manuel installation
 
@@ -101,7 +124,7 @@ ESPSCRIPTS_LOCAL=1 ESPSCRIPTS_DB=./library.sqlite3 .venv/bin/python espscripts/a
 
 Åbn `http://127.0.0.1:8099`. `ESPSCRIPTS_LOCAL=1` er kun til lokal udvikling: produktionsappen tillader kun Ingress-proxyen på `172.30.32.2`, og appens konfiguration eksponerer ingen værtsport.
 
-De lokale tests dækker lagring, versionshistorik, backup, YAML-kontrol, adgangskontrol og samtidige ændringer. Browserkontrol dækker oprettelse, hardwarevalg, katalogtilføjelser, søgning og standardprint-generatoren, inklusive lagring og egne skabeloner. Mobil- og desktoplayout er visuelt kontrolleret. Docker er ikke tilgængelig i udviklingsmiljøet, så containerbygning, installation og Ingress skal afprøves på en rigtig HA-installation. GitHub-workflows er ikke aktiveret i denne udgave.
+De lokale tests dækker lagring, versionshistorik, backup, YAML-kontrol, adgangskontrol og samtidige ændringer. Browserkontrol dækker oprettelse, hardwarevalg, katalogtilføjelser, søgning og standardprint-generatoren, inklusive lagring og egne skabeloner. Linkimport og gemning er afprøvet i browseren med begge Seeed-links, inklusive eksisterende katalogmatch og udvidelsesboard som modul. Mobil- og desktoplayout er visuelt kontrolleret. Docker er ikke tilgængelig i udviklingsmiljøet, så containerbygning, installation og Ingress skal afprøves på en rigtig HA-installation. GitHub-workflows er ikke aktiveret i denne udgave.
 
 ## Dokumentation
 

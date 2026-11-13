@@ -1,3 +1,14 @@
+# 0.3.0
+
+- Importér boards, sensorer og udvidelsesboards fra et offentligt produktlink.
+- Forhåndsvis og ret navn, hardwaretype, familie/tilslutning, beskrivelse og dokumentationslink før gemning.
+- Find eksisterende katalogmodeller og genbrug kendte ESPHome-metadata uden at gætte på board-ID.
+- Udvidelsesboards kan bruges som moduler ved siden af et separat ESP32-board og findes i sensorvælgeren.
+- Beskrivelser, hardwaretype og ESPHome-metadata bevares ved redigering og i backup.
+- Linkhentning med HTTPS, validering af netværksadresser, TLS og begrænsninger på størrelse, dybde og svartid.
+- Afprøvet med Seeed Studio mmWave for XIAO og XIAO ESP32C3.
+- Eksisterende data og import af backupformat 1 og 2 er fortsat understøttet.
+
 # 0.2.0
 
 - Nyt grafisk layout med hardwarekort, biblioteksoverblik og et guidet oprettelsesforløb i tre trin.

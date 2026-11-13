@@ -8,6 +8,7 @@ from pathlib import Path
 from uuid import uuid4
 
 import yaml
+from link_import import fetch_page, draft_from_html
 from flask import Flask, jsonify, request, send_from_directory
 from werkzeug.exceptions import HTTPException
 
@@ -192,11 +193,20 @@ def validate_catalog_item(data):
     if not isinstance(data, dict) or data.get('kind') not in ('boards', 'sensors'):
         raise ValueError('Vælg board eller sensor.')
     result = {'kind': data['kind']}
-    for key in ('name', 'category', 'detail', 'docs_url'):
+    for key in ('name', 'category', 'detail', 'docs_url', 'description'):
         value = data.get(key, '')
         if not isinstance(value, str) or len(value) > 500:
             raise ValueError('Katalogfelter må højst være 500 tegn.')
         result[key] = value.strip()
+    result['hardware_type'] = data.get('hardware_type', 'sensor' if data['kind'] == 'sensors' else 'other')
+    if result['hardware_type'] not in ('esp32', 'expansion', 'sensor', 'other'):
+        raise ValueError('Ugyldig hardwaretype.')
+    if (result['hardware_type'] == 'sensor') != (result['kind'] == 'sensors'):
+        raise ValueError('Sensorer skal ligge under Sensorer; boards og udvidelsesboards under Boards.')
+    meta = data.get('esphome', {})
+    if not isinstance(meta, dict) or any(key not in ('platform', 'board', 'variant', 'framework') or not isinstance(value, str) or len(value) > 100 or not all(c.isalnum() or c in '_-' for c in value) for key, value in meta.items()):
+        raise ValueError('Ugyldige ESPHome-metadata.')
+    result['esphome'] = meta
     if not result['name']:
         raise ValueError('Angiv et navn.')
     if ',' in result['name']:
@@ -232,6 +242,18 @@ def catalog():
     with connect() as db:
         custom = [json.loads(r['document']) for r in db.execute('SELECT document FROM catalog')]
     return jsonify(**{kind: [dict(x, custom=False) for x in BUILTIN_CATALOG[kind]] + [x for x in custom if x['kind'] == kind] for kind in ('boards', 'sensors')})
+
+
+@app.post('/api/catalog/preview-link')
+def preview_catalog_link():
+    data = request.get_json()
+    if not isinstance(data, dict):
+        raise ValueError('Indsæt et produktlink.')
+    url, html = fetch_page(data.get('url'))
+    with connect() as db:
+        custom = [json.loads(row['document']) for row in db.execute('SELECT document FROM catalog')]
+    items = {kind: BUILTIN_CATALOG[kind] + [x for x in custom if x['kind'] == kind] for kind in ('boards', 'sensors')}
+    return jsonify(draft_from_html(url, html, items))
 
 
 @app.post('/api/catalog')
