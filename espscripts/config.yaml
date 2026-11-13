@@ -1,5 +1,5 @@
 name: ESPScripts
-version: 0.1.0
+version: 0.2.0
 slug: espscripts
 description: Bibliotek til ESPHome YAML, sensorblokke og testede ESP32-opsætninger
 arch:

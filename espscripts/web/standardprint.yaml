@@ -1,0 +1,36 @@
+# =============================================
+# COMMON
+# =============================================
+
+substitutions:
+  device_name: "{{device_name}}"
+  device_friendly_name: "{{friendly_name}}"
+
+  # API- og OTA-nøgle
+  device_secret: !secret "{{secret_prefix}}_secret"
+
+  # WireGuard-private key genereret af firewallen
+  wg_private_key: !secret "{{secret_prefix}}_wg_secret"
+
+  # WireGuard-adresse
+  wg_address: !secret "{{secret_prefix}}_wg_address"
+
+packages:
+  base: !include common/base.yaml
+  wireguard: !include common/wireguard.yaml
+
+# =============================================
+# HARDWARE
+# =============================================
+
+esp32:
+  variant: "{{variant}}"
+  flash_size: "{{flash_size}}"
+  framework:
+    type: esp-idf
+
+# =============================================
+# ENHEDSSPECIFIK KONFIGURATION
+# =============================================
+
+logger:

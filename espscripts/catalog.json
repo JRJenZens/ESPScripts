@@ -1,0 +1,4102 @@
+{
+  "version": 1,
+  "updated": "2026-11-13",
+  "source": "ESPHome-katalog via Home Assistant",
+  "boards": [
+    {
+      "id": "apollo-esk-1",
+      "name": "ESPHome Starter Kit By Apollo",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitm-1",
+      "docs_url": "https://wiki.apolloautomation.com/products/ESPHome-Starter-Kit/start-here/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitm-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c6-devkitm-1",
+      "name": "Espressif ESP32-C6-DevKitM-1",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitm-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32",
+      "name": "Generic ESP32 Board",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32c2",
+      "name": "Generic ESP32-C2 Board",
+      "category": "ESP32-C2",
+      "detail": "esp32-c2-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c2-devkitm-1",
+        "variant": "esp32c2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32c3",
+      "name": "Generic ESP32-C3 Board",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32c5",
+      "name": "Generic ESP32-C5 Board",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc-1",
+        "variant": "esp32c5",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32c6",
+      "name": "Generic ESP32-C6 Board",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32c61",
+      "name": "Generic ESP32-C61 Board",
+      "category": "ESP32-C61",
+      "detail": "esp32-c61-devkitc1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c61-devkitc1",
+        "variant": "esp32c61",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32h2",
+      "name": "Generic ESP32-H2 Board",
+      "category": "ESP32-H2",
+      "detail": "esp32-h2-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-h2-devkitm-1",
+        "variant": "esp32h2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32p4",
+      "name": "Generic ESP32-P4 Board (pre-rev3)",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true
+      }
+    },
+    {
+      "id": "generic-esp32p4-r3",
+      "name": "Generic ESP32-P4 Board (rev3)",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4_r3-evboard",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4_r3-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32s2",
+      "name": "Generic ESP32-S2 Board",
+      "category": "ESP32-S2",
+      "detail": "esp32-s2-saola-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s2-saola-1",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "generic-esp32s3",
+      "name": "Generic ESP32-S3 Board",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "4d_systems_esp32s3_gen4_r8n16",
+      "name": "4D Systems GEN4-ESP32 16MB (ESP32S3-R8N16)",
+      "category": "ESP32-S3",
+      "detail": "4d_systems_esp32s3_gen4_r8n16",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "4d_systems_esp32s3_gen4_r8n16",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "featheresp32",
+      "name": "Adafruit ESP32 Feather",
+      "category": "ESP32",
+      "detail": "featheresp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "featheresp32",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "featheresp32-s2",
+      "name": "Adafruit ESP32-S2 Feather Development Board",
+      "category": "ESP32-S2",
+      "detail": "featheresp32-s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "featheresp32-s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s2_tft",
+      "name": "Adafruit ESP32-S2 TFT Feather",
+      "category": "ESP32-S2",
+      "detail": "adafruit_feather_esp32s2_tft",
+      "docs_url": "https://learn.adafruit.com/adafruit-esp32-s2-tft-feather",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s2_tft",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32_v2",
+      "name": "Adafruit Feather ESP32 V2",
+      "category": "ESP32",
+      "detail": "adafruit_feather_esp32_v2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32_v2",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32c6",
+      "name": "Adafruit Feather ESP32-C6",
+      "category": "ESP32-C6",
+      "detail": "adafruit_feather_esp32c6",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32c6",
+        "variant": "esp32c6"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s2",
+      "name": "Adafruit Feather ESP32-S2",
+      "category": "ESP32-S2",
+      "detail": "adafruit_feather_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s2_reversetft",
+      "name": "Adafruit Feather ESP32-S2 Reverse TFT",
+      "category": "ESP32-S2",
+      "detail": "adafruit_feather_esp32s2_reversetft",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s2_reversetft",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s3",
+      "name": "Adafruit Feather ESP32-S3 2MB PSRAM",
+      "category": "ESP32-S3",
+      "detail": "adafruit_feather_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s3_nopsram",
+      "name": "Adafruit Feather ESP32-S3 No PSRAM",
+      "category": "ESP32-S3",
+      "detail": "adafruit_feather_esp32s3_nopsram",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s3_nopsram",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s3_reversetft",
+      "name": "Adafruit Feather ESP32-S3 Reverse TFT",
+      "category": "ESP32-S3",
+      "detail": "adafruit_feather_esp32s3_reversetft",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s3_reversetft",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_feather_esp32s3_tft",
+      "name": "Adafruit Feather ESP32-S3 TFT",
+      "category": "ESP32-S3",
+      "detail": "adafruit_feather_esp32s3_tft",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_feather_esp32s3_tft",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_funhouse_esp32s2",
+      "name": "Adafruit FunHouse",
+      "category": "ESP32-S2",
+      "detail": "adafruit_funhouse_esp32s2",
+      "docs_url": "https://learn.adafruit.com/adafruit-funhouse",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_funhouse_esp32s2",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "adafruit_itsybitsy_esp32",
+      "name": "Adafruit ItsyBitsy ESP32",
+      "category": "ESP32",
+      "detail": "adafruit_itsybitsy_esp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_itsybitsy_esp32",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "adafruit_magtag29_esp32s2",
+      "name": "Adafruit MagTag 2.9",
+      "category": "ESP32-S2",
+      "detail": "adafruit_magtag29_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_magtag29_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "adafruit_matrixportal_esp32s3",
+      "name": "Adafruit MatrixPortal ESP32-S3",
+      "category": "ESP32-S3",
+      "detail": "adafruit_matrixportal_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_matrixportal_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_metro_esp32s2",
+      "name": "Adafruit Metro ESP32-S2",
+      "category": "ESP32-S2",
+      "detail": "adafruit_metro_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_metro_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "adafruit_metro_esp32s3",
+      "name": "Adafruit Metro ESP32-S3",
+      "category": "ESP32-S3",
+      "detail": "adafruit_metro_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_metro_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_camera_esp32s3",
+      "name": "Adafruit pyCamera S3",
+      "category": "ESP32-S3",
+      "detail": "adafruit_camera_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_camera_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_qtpy_esp32",
+      "name": "Adafruit QT Py ESP32",
+      "category": "ESP32",
+      "detail": "adafruit_qtpy_esp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_qtpy_esp32",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "adafruit_qtpy_esp32c3",
+      "name": "Adafruit QT Py ESP32-C3",
+      "category": "ESP32-C3",
+      "detail": "adafruit_qtpy_esp32c3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_qtpy_esp32c3",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "adafruit_qtpy_esp32s2",
+      "name": "Adafruit QT Py ESP32-S2",
+      "category": "ESP32-S2",
+      "detail": "adafruit_qtpy_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_qtpy_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "adafruit_qtpy_esp32s3_n4r2",
+      "name": "Adafruit QT Py ESP32-S3 (4M Flash 2M PSRAM)",
+      "category": "ESP32-S3",
+      "detail": "adafruit_qtpy_esp32s3_n4r2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_qtpy_esp32s3_n4r2",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_qtpy_esp32s3_nopsram",
+      "name": "Adafruit QT Py ESP32-S3 No PSRAM",
+      "category": "ESP32-S3",
+      "detail": "adafruit_qtpy_esp32s3_nopsram",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_qtpy_esp32s3_nopsram",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "adafruit_qualia_s3_rgb666",
+      "name": "Adafruit Qualia ESP32-S3 RGB666",
+      "category": "ESP32-S3",
+      "detail": "adafruit_qualia_s3_rgb666",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "adafruit_qualia_s3_rgb666",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32cam",
+      "name": "AI Thinker ESP32-CAM",
+      "category": "ESP32",
+      "detail": "esp32cam",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32cam",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c3-m1i-kit",
+      "name": "Ai-Thinker ESP-C3-M1-I-Kit",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-m1i-kit",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-m1i-kit",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "airm2m_core_esp32c3",
+      "name": "AirM2M CORE ESP32C3",
+      "category": "ESP32-C3",
+      "detail": "airm2m_core_esp32c3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "airm2m_core_esp32c3",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "alksesp32",
+      "name": "ALKS ESP32",
+      "category": "ESP32",
+      "detail": "alksesp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "alksesp32",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "apollo-esp32-s3",
+      "name": "Apollo DEV-1 ESP32-S3 Development Board",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "apollo-esp32-c6",
+      "name": "Apollo DEV-2 ESP32-C6 Development Board",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "arduino_nano_esp32",
+      "name": "Arduino Nano ESP32",
+      "category": "ESP32-S3",
+      "detail": "arduino_nano_esp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "arduino_nano_esp32",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "ioxesp32",
+      "name": "ArtronShop IOXESP32",
+      "category": "ESP32",
+      "detail": "ioxesp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "ioxesp32",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "ioxesp32ps",
+      "name": "ArtronShop IOXESP32PS",
+      "category": "ESP32",
+      "detail": "ioxesp32ps",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "ioxesp32ps",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "athom-smart-plug-v3",
+      "name": "Athom Smart Plug v3",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/sensor/hlw8012.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "wifiduino32c3",
+      "name": "Blinker WiFiduinoV2 (ESP32-C3)",
+      "category": "ESP32-C3",
+      "detail": "wifiduino32c3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "wifiduino32c3",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "minimain_esp32s2",
+      "name": "Deparment of Alchemy MiniMain ESP32-S2",
+      "category": "ESP32-S2",
+      "detail": "minimain_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "minimain_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "dfrobot_beetle_esp32c3",
+      "name": "DFRobot Beetle ESP32-C3",
+      "category": "ESP32-C3",
+      "detail": "dfrobot_beetle_esp32c3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "dfrobot_beetle_esp32c3",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "dfrobot_firebeetle2_esp32c6",
+      "name": "DFRobot FireBeetle 2 ESP32-C6",
+      "category": "ESP32-C6",
+      "detail": "dfrobot_firebeetle2_esp32c6",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "dfrobot_firebeetle2_esp32c6",
+        "variant": "esp32c6"
+      }
+    },
+    {
+      "id": "dfrobot_firebeetle2_esp32e",
+      "name": "DFRobot Firebeetle 2 ESP32-E",
+      "category": "ESP32",
+      "detail": "dfrobot_firebeetle2_esp32e",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "dfrobot_firebeetle2_esp32e",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "dfrobot_firebeetle2_esp32s3",
+      "name": "DFRobot Firebeetle 2 ESP32-S3",
+      "category": "ESP32-S3",
+      "detail": "dfrobot_firebeetle2_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "dfrobot_firebeetle2_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "dfrobot_romeo_esp32s3",
+      "name": "DFRobot Romeo ESP32-S3",
+      "category": "ESP32-S3",
+      "detail": "dfrobot_romeo_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "dfrobot_romeo_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32doit-devkit-v1",
+      "name": "DOIT ESP32 DEVKIT V1",
+      "category": "ESP32",
+      "detail": "esp32doit-devkit-v1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32doit-devkit-v1",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32doit-espduino",
+      "name": "DOIT ESPduino32",
+      "category": "ESP32",
+      "detail": "esp32doit-espduino",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32doit-espduino",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp320",
+      "name": "Electronic SweetPeas ESP320",
+      "category": "ESP32",
+      "detail": "esp320",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp320",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32-devkit-v1",
+      "name": "ESP32 DevKit V1",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "fm-devkit",
+      "name": "ESP32 FM DevKit",
+      "category": "ESP32",
+      "detail": "fm-devkit",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "fm-devkit",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32_multiboard",
+      "name": "ESP32 Multiboard",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32-Multiboard/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "pico32",
+      "name": "ESP32 Pico Kit",
+      "category": "ESP32",
+      "detail": "pico32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "pico32",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32_relay_x16",
+      "name": "ESP32 Relay Board X16",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32-Relay-X16/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32e_relay_x8",
+      "name": "ESP32 Relay Board x8",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32E-Relay-X8/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32_relay_x1",
+      "name": "ESP32 Relay x1",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32-Relay-X1/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32_relay_x2",
+      "name": "ESP32 Relay x2",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32-Relay-X2/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32-2424s012",
+      "name": "ESP32-2424S012 Round CYD 1.28\"",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://github.com/rzeldent/esp32-smartdisplay",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "jczn_2432s028r",
+      "name": "ESP32-2432S028R CYD",
+      "category": "ESP32",
+      "detail": "jczn_2432s028r",
+      "docs_url": "https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display",
+      "esphome": {
+        "platform": "esp32",
+        "board": "jczn_2432s028r",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32-c3-devkitm-1",
+      "name": "ESP32-C3 DevKitM-1",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c3-supermini",
+      "name": "ESP32-C3 Super Mini",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c6-devkitc-1",
+      "name": "ESP32-C6 DevKitC-1",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32s3_120_16_8-qio_opi",
+      "name": "ESP32-S3 16MB QIO, 8MB OPI PSRAM",
+      "category": "ESP32-S3",
+      "detail": "esp32s3_120_16_8-qio_opi",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32s3_120_16_8-qio_opi",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32_s3_4_0_inch_smart_display",
+      "name": "ESP32-S3 4.0 Inch Smart Display",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/ESP32-S3-4.0-Inch-Smart-Display/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc-1",
+      "name": "ESP32-S3 DevKitC-1",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32s3_powerfeather",
+      "name": "ESP32-S3 PowerFeather",
+      "category": "ESP32-S3",
+      "detail": "esp32s3_powerfeather",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32s3_powerfeather",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32_relay_x4",
+      "name": "ESP32_Relay X4 (AC/DC powered)",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32-Relay-x4/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32_relay_x4_modbus_v1_3",
+      "name": "ESP32_Relay_X4_Modbus_v1.3",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/ESP32_Relay_X4_Modbus_v1.3/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32s3camlcd",
+      "name": "ESP32S3 CAM LCD",
+      "category": "ESP32-S3",
+      "detail": "esp32s3camlcd",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32s3camlcd",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32s3_1_8_inch_jc3636k518c",
+      "name": "ESP32S3-1.8-inch JC3636K518C",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/ESP32S3-1.8-inch-JC3636K518C/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32vn-iot-uno",
+      "name": "ESP32vn IoT Uno",
+      "category": "ESP32",
+      "detail": "esp32vn-iot-uno",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32vn-iot-uno",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "atmegazero_esp32s2",
+      "name": "EspinalLab ATMegaZero ESP32-S2",
+      "category": "ESP32-S2",
+      "detail": "atmegazero_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "atmegazero_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "esp32dev",
+      "name": "Espressif ESP32 Dev Module",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32"
+      }
+    },
+    {
+      "id": "esp32-c2-devkitm-1",
+      "name": "Espressif ESP32-C2-DevKitM-1",
+      "category": "ESP32-C2",
+      "detail": "esp32-c2-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c2-devkitm-1",
+        "variant": "esp32c2"
+      }
+    },
+    {
+      "id": "esp32-c3-devkitc-02",
+      "name": "Espressif ESP32-C3-DevKitC-02",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitc-02",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitc-02",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c5-devkitc-1",
+      "name": "Espressif ESP32-C5-DevKitC-1 4MB no PSRAM",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc-1",
+        "variant": "esp32c5",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c5-devkitc1-n16r4",
+      "name": "Espressif ESP32-C5-DevKitC-1 N16R4 (16 MB Flash Quad, 4 MB PSRAM Quad)",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc1-n16r4",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc1-n16r4",
+        "variant": "esp32c5"
+      }
+    },
+    {
+      "id": "esp32-c5-devkitc1-n4",
+      "name": "Espressif ESP32-C5-DevKitC-1 N4 (4MB no PSRAM)",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc1-n4",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc1-n4",
+        "variant": "esp32c5"
+      }
+    },
+    {
+      "id": "esp32-c5-devkitc1-n8r4",
+      "name": "Espressif ESP32-C5-DevKitC-1 N8R4 (8 MB Flash Quad, 4 MB PSRAM Quad)",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc1-n8r4",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc1-n8r4",
+        "variant": "esp32c5"
+      }
+    },
+    {
+      "id": "esp32-c61-devkitc1",
+      "name": "Espressif ESP32-C61-DevKitC-1 (4 MB Flash)",
+      "category": "ESP32-C61",
+      "detail": "esp32-c61-devkitc1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c61-devkitc1",
+        "variant": "esp32c61",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c61-devkitc1-n8r2",
+      "name": "Espressif ESP32-C61-DevKitC-1 N8R2 (8 MB Flash Quad, 2 MB PSRAM Quad)",
+      "category": "ESP32-C61",
+      "detail": "esp32-c61-devkitc1-n8r2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c61-devkitc1-n8r2",
+        "variant": "esp32c61"
+      }
+    },
+    {
+      "id": "esp32-ethernet-kit",
+      "name": "Espressif ESP32-Ethernet-Kit",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://esphome.io/components/ethernet.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-h2-devkitm-1",
+      "name": "Espressif ESP32-H2-DevKit",
+      "category": "ESP32-H2",
+      "detail": "esp32-h2-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-h2-devkitm-1",
+        "variant": "esp32h2"
+      }
+    },
+    {
+      "id": "esp32-p4",
+      "name": "Espressif ESP32-P4 ES (pre rev.300) generic",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4",
+        "variant": "esp32p4",
+        "engineering_sample": true
+      }
+    },
+    {
+      "id": "esp32-p4-evboard",
+      "name": "Espressif ESP32-P4 Function EV Board (ES pre rev.300)",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "engineering_sample": true
+      }
+    },
+    {
+      "id": "esp32-c5-devkit-lipo",
+      "name": "OLIMEX ESP32-C5-DevKit-LiPo",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc-1",
+        "variant": "esp32c5",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c5-evb",
+      "name": "OLIMEX ESP32-C5-EVB",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc1-n8r4",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc1-n8r4",
+        "variant": "esp32c5",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare-esp32-c5-zero",
+      "name": "Waveshare ESP32-C5-Zero",
+      "category": "ESP32-C5",
+      "detail": "esp32-c5-devkitc-1",
+      "docs_url": "https://docs.waveshare.com/ESP32-C5-Zero",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c5-devkitc-1",
+        "variant": "esp32c5",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32s3box",
+      "name": "Espressif ESP32-S3-Box-3",
+      "category": "ESP32-S3",
+      "detail": "esp32s3box",
+      "docs_url": "https://github.com/espressif/esp-box",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32s3box",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n16r16",
+      "name": "Espressif ESP32-S3-DevKitC-1-N16R16V (16 MB Flash Quad, 16 MB PSRAM Octal)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n16r16",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n16r16",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n16r2",
+      "name": "Espressif ESP32-S3-DevKitC-1-N16R2 (16 MB Flash Quad, 2 MB PSRAM Quad)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n16r2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n16r2",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n16r8",
+      "name": "Espressif ESP32-S3-DevKitC-1-N16R8V (16 MB Flash Quad, 8 MB PSRAM Octal)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n16r8",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n16r8",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc-1-n32r8v",
+      "name": "Espressif ESP32-S3-DevKitC-1-N32R8V (32 MB Flash Octal, 8 MB PSRAM Octal)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1-n32r8v",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1-n32r8v",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n4r2",
+      "name": "Espressif ESP32-S3-DevKitC-1-N4R2 (4 MB Flash Quad, 2 MB PSRAM Quad)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n4r2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n4r2",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n4r8",
+      "name": "Espressif ESP32-S3-DevKitC-1-N4R8 (4 MB Flash Quad, 8 MB PSRAM Octal)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n4r8",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n4r8",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n8r2",
+      "name": "Espressif ESP32-S3-DevKitC-1-N8R2 (8 MB Flash Quad, 2 MB PSRAM quad)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n8r2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n8r2",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitc1-n8r8",
+      "name": "Espressif ESP32-S3-DevKitC-1-N8R8 (8 MB Flash Quad, 8 MB PSRAM Octal)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc1-n8r8",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc1-n8r8",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkitm-1",
+      "name": "Espressif ESP32-S3-DevKitM-1",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitm-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-s3-fh4r2",
+      "name": "Espressif ESP32-S3-FH4R2 (4 MB QD, 2MB PSRAM)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-fh4r2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-fh4r2",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32s3usbotg",
+      "name": "Espressif ESP32-S3-USB-OTG",
+      "category": "ESP32-S3",
+      "detail": "esp32s3usbotg",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32s3usbotg",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "freenove-esp32-s3-n8r8",
+      "name": "Freenove ESP32-S3 WROOM N8R8 (8MB Flash / 8MB PSRAM)",
+      "category": "ESP32-S3",
+      "detail": "freenove-esp32-s3-n8r8",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "freenove-esp32-s3-n8r8",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "guition_esp32_s3_4848s040",
+      "name": "Guition ESP32-S3-4848S040 480*480 Smart Screen",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/Guition-ESP32-S3-4848S040/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "guition-jc3248w535",
+      "name": "Guition JC3248W535",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/display/mipi_spi/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "guition-jc3636w518",
+      "name": "Guition JC3636W518",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/display/mipi_spi/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "heltec_wifi_lora_32_V3",
+      "name": "Heltec WiFi LoRa 32 (V3)",
+      "category": "ESP32-S3",
+      "detail": "heltec_wifi_lora_32_V3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "heltec_wifi_lora_32_V3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "kincony_kc868_a16v3",
+      "name": "KinCony KC868-A16v3 (ESP32-S3 16CH Mosfet Board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-KC868-A16v3/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_kc868_a2v3",
+      "name": "KinCony KC868-A2v3 (ESP32-S3 2CH Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-KC868-A2v3/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_kc868_a6v3",
+      "name": "KinCony KC868-A6v3 (ESP32-S3 LoRa Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-KC868-A6v3/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_kc868_a8v3",
+      "name": "KinCony KC868-A8v3 (ESP32-S3 Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-KC868-A8v3/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_a32pro",
+      "name": "KinCony-A32 Pro (ESP32-S3 32CH Relay Controller)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-A32Pro/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_ag8",
+      "name": "KinCony-AG8 (ESP32-S3 Smart IR Controller)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-AG8/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_aio",
+      "name": "KinCony-AIO Hybrid (ESP32-S3 ALL IN ONE Removable Relay board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-AIO/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_atf",
+      "name": "KinCony-ATF (ESP32-S3 SD Card Module)",
+      "category": "ESP32",
+      "detail": "esp32dev",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-ATF/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32dev",
+        "variant": "esp32",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_b16",
+      "name": "KinCony-B16 (ESP32-S3 16CH Relay board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B16/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_b16m",
+      "name": "KinCony-B16M (ESP32-S3 16CH MOSFET)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B16M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_b2",
+      "name": "KinCony-B2 (ESP32-S3 2CH Relay board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B2/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_b24",
+      "name": "KinCony-B24 (ESP32-S3 16CH Relay board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B24/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_b24m",
+      "name": "KinCony-B24M (ESP32-S3 16CH MOSFET)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B24M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_b32m",
+      "name": "KinCony-B32M (ESP32-S3 32CH MOSFET)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B32M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_b4",
+      "name": "KinCony-B4 (ESP32-S3 4CH Relay board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B4/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_b4m",
+      "name": "KinCony-B4M (ESP32-S3 4CH Mosfet board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B4M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_b8",
+      "name": "KinCony-B8 (ESP32-S3 8CH Relay board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B8/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_b8m",
+      "name": "KinCony-B8M (ESP32-S3 8CH MOSFET)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-B8M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_co16",
+      "name": "KinCony-CO16 (ESP32-S3 16CH Analog Input board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-CO16/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_dm16",
+      "name": "KinCony-DM16 (ESP32-S3 16CH Dimmer board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-DM16/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_dm32",
+      "name": "KinCony-DM32 (ESP32-S3 32CH Dimmer board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-DM32/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_dm4",
+      "name": "KinCony-DM4 (ESP32-S3 4CH Dimmer board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-DM4/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_dm8",
+      "name": "KinCony-DM8 (ESP32-S3 8CH Dimmer board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-DM8/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_f16",
+      "name": "KinCony-F16 (ESP32-S3 16A Removable Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-F16/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_f24",
+      "name": "KinCony-F24 (ESP32-S3 16A Removable Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-F24/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_f32",
+      "name": "KinCony-F32 (ESP32-S3 16A Removable Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-F32/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino",
+        "logger_hardware_uart": "USB_CDC"
+      }
+    },
+    {
+      "id": "kincony_f4",
+      "name": "KinCony-F4 (ESP32-S3 16A Removable Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-F4/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_f8",
+      "name": "KinCony-F8 (ESP32-S3 16A Removable Relay)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-F8/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_mt4",
+      "name": "KinCony-MT4 (ESP32-S3 4CH DC motor driver board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-MT4/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "kincony_t128m",
+      "name": "KinCony-T128M (ESP32-S3 128CH Mosfet board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-T128M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_t16m",
+      "name": "KinCony-T16M (ESP32-S3 16CH Mosfet board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-T16M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "kincony_t32m",
+      "name": "KinCony-T32M (ESP32-S3 32CH Mosfet board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-T32M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "kincony_t64m",
+      "name": "KinCony-T64M (ESP32-S3 64CH Mosfet board)",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/KinCony-T64M/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf",
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "lilygo-t-display-s3",
+      "name": "LilyGo T-Display S3",
+      "category": "ESP32-S3",
+      "detail": "lilygo-t-display-s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "lilygo-t-display-s3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "lilygo-t-display-s3-amoled",
+      "name": "LILYGO T-Display-S3-AMOLED",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://github.com/Xinyuan-LilyGO/T-Display-S3-AMOLED",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "lilygo-t-embed",
+      "name": "LILYGO T-Embed",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://github.com/Xinyuan-LilyGO/T-Embed",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "lilygo-t-energy-s3",
+      "name": "LilyGo T-Energy-S3",
+      "category": "ESP32-S3",
+      "detail": "lilygo-t-energy-s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "lilygo-t-energy-s3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "lilygo-t4-s3",
+      "name": "LILYGO T4-S3",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://github.com/Xinyuan-LilyGO/LilyGo-AMOLED-Series",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "m5stack-atoms3",
+      "name": "M5Stack AtomS3",
+      "category": "ESP32-S3",
+      "detail": "m5stack-atoms3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "m5stack-atoms3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "m5stack-atoms3u",
+      "name": "M5Stack AtomS3U",
+      "category": "ESP32-S3",
+      "detail": "m5stack-atoms3u",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "m5stack-atoms3u",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "m5stack-cores3",
+      "name": "M5Stack CoreS3",
+      "category": "ESP32-S3",
+      "detail": "m5stack-cores3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "m5stack-cores3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "m5stack-stamps3",
+      "name": "M5Stack StampS3",
+      "category": "ESP32-S3",
+      "detail": "m5stack-stamps3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "m5stack-stamps3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "motorgo_mini_1",
+      "name": "MotorGo Mini 1 (ESP32-S3)",
+      "category": "ESP32-S3",
+      "detail": "motorgo_mini_1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "motorgo_mini_1",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "redpill_esp32s3",
+      "name": "Munich Labs RedPill ESP32-S3",
+      "category": "ESP32-S3",
+      "detail": "redpill_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "redpill_esp32s3",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-s3-devkit-lipo",
+      "name": "OLIMEX ESP32-S3-DevKit-LiPo",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "rymcu-esp32-s3-devkitc-1",
+      "name": "RYMCU ESP32-S3-DevKitC-1-N8R2 (8 MB QD, 2 MB PSRAM)",
+      "category": "ESP32-S3",
+      "detail": "rymcu-esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "rymcu-esp32-s3-devkitc-1",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "seeed-xiao-esp32s3-w5500",
+      "name": "Seeed Studio XIAO ESP32-S3 + W5500 Ethernet",
+      "category": "ESP32-S3",
+      "detail": "seeed_xiao_esp32s3",
+      "docs_url": "https://esphome.io/components/ethernet.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "seeed_xiao_esp32s3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "seeed-xiao-w5500-zwave-proxy",
+      "name": "Seeed Studio XIAO W5500 v1.2+ Z-Wave Proxy (ZWA-2)",
+      "category": "ESP32-S3",
+      "detail": "seeed_xiao_esp32_s3_plus",
+      "docs_url": "https://esphome.io/components/zwave_proxy",
+      "esphome": {
+        "platform": "esp32",
+        "board": "seeed_xiao_esp32_s3_plus",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "seeed-xiao-esp32s3",
+      "name": "Seeed XIAO ESP32S3",
+      "category": "ESP32-S3",
+      "detail": "seeed_xiao_esp32s3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "seeed_xiao_esp32s3",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "tenstar_robot_esp32_s3_supermini",
+      "name": "TENSTAR ROBOT ESP32-S3 Supermini",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/TENSTAR-ROBOT-ESP32-S3-SuperMini/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_rgb_matrix",
+      "name": "Waveshare ESP32-S3 RGB Matrix Driver Board",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-S3-RGB-Matrix",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare-esp32-s3-eth",
+      "name": "Waveshare ESP32-S3-ETH",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://esphome.io/components/ethernet.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_eth_8di_8do",
+      "name": "WAVESHARE ESP32-S3-ETH-8DI-8DO",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/Waveshare-ESP32-S3-ETH-8DI-8DO/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_eth_8di_8ro",
+      "name": "WAVESHARE ESP32-S3-ETH-8DI-8RO",
+      "category": "ESP32-S3",
+      "detail": "esp32s3box",
+      "docs_url": "https://devices.esphome.io/devices/Waveshare-ESP32-S3-ETH-8DI-8RO/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32s3box",
+        "variant": "esp32s3",
+        "framework": "arduino"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_geek",
+      "name": "Waveshare ESP32-S3-GEEK",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-S3-GEEK",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "ws_esp32_s3_matrix",
+      "name": "Waveshare ESP32-S3-Matrix",
+      "category": "ESP32-S3",
+      "detail": "ws_esp32_s3_matrix",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "ws_esp32_s3_matrix",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_nano",
+      "name": "Waveshare ESP32-S3-Nano",
+      "category": "ESP32-S3",
+      "detail": "arduino_nano_esp32",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "arduino_nano_esp32",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_touch_amoled_1_75",
+      "name": "Waveshare ESP32-S3-Touch-AMOLED-1.75",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://devices.esphome.io/devices/Waveshare-ESP32-S3-Touch-AMOLED-1.75/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_touch_amoled_2_16",
+      "name": "Waveshare ESP32-S3-Touch-AMOLED-2.16",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-S3-Touch-AMOLED-2.16",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32s3_touch_lcd_128",
+      "name": "Waveshare ESP32-S3-Touch-LCD-1.28 (16 MB QD, 2MB PSRAM)",
+      "category": "ESP32-S3",
+      "detail": "waveshare_esp32s3_touch_lcd_128",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "waveshare_esp32s3_touch_lcd_128",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_touch_lcd_1_83",
+      "name": "Waveshare ESP32-S3-Touch-LCD-1.83",
+      "category": "ESP32-S3",
+      "detail": "esp32-s3-devkitc-1",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.83",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s3-devkitc-1",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_s3_zero",
+      "name": "Waveshare ESP32-S3-Zero",
+      "category": "ESP32-S3",
+      "detail": "waveshare_esp32_s3_zero",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "waveshare_esp32_s3_zero",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "lolin_s3_mini",
+      "name": "WEMOS LOLIN S3 Mini",
+      "category": "ESP32-S3",
+      "detail": "lolin_s3_mini",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "lolin_s3_mini",
+        "variant": "esp32s3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "yb_esp32s3_amp",
+      "name": "YelloByte YB-ESP32-S3-AMP",
+      "category": "ESP32-S3",
+      "detail": "yb_esp32s3_amp",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "yb_esp32s3_amp",
+        "variant": "esp32s3"
+      }
+    },
+    {
+      "id": "esp32-c3-devkit-lipo",
+      "name": "OLIMEX ESP32-C3-DevKit-LiPo",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "seeed-xiao-esp32c3",
+      "name": "Seeed XIAO ESP32C3",
+      "category": "ESP32-C3",
+      "detail": "seeed_xiao_esp32c3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "seeed_xiao_esp32c3",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "sparkfun_pro_micro_esp32c3",
+      "name": "SparkFun Pro Micro ESP32-C3",
+      "category": "ESP32-C3",
+      "detail": "sparkfun_pro_micro_esp32c3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "sparkfun_pro_micro_esp32c3",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "ttgo-t-oi-plus",
+      "name": "TTGO T-OI PLUS RISC-V ESP32-C3",
+      "category": "ESP32-C3",
+      "detail": "ttgo-t-oi-plus",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "ttgo-t-oi-plus",
+        "variant": "esp32c3"
+      }
+    },
+    {
+      "id": "waveshare_esp32_c3_zero",
+      "name": "Waveshare ESP32-C3-Zero",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "lolin_c3_mini",
+      "name": "WEMOS LOLIN C3 Mini",
+      "category": "ESP32-C3",
+      "detail": "lolin_c3_mini",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "lolin_c3_mini",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "wt32-eth01-evo",
+      "name": "WT32-ETH01-EVO",
+      "category": "ESP32-C3",
+      "detail": "esp32-c3-devkitm-1",
+      "docs_url": "https://esphome.io/components/ethernet.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c3-devkitm-1",
+        "variant": "esp32c3",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c6-devkit-lipo",
+      "name": "OLIMEX ESP32-C6-DevKit-LiPo",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-c6-evb",
+      "name": "OLIMEX ESP32-C6-EVB",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "sparkfun_qwiic_pocket_esp32c6",
+      "name": "SparkFun ESP32-C6 Qwiic Pocket",
+      "category": "ESP32-C6",
+      "detail": "sparkfun_qwiic_pocket_esp32c6",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "sparkfun_qwiic_pocket_esp32c6",
+        "variant": "esp32c6"
+      }
+    },
+    {
+      "id": "sparkfun_esp32c6_thing_plus",
+      "name": "Sparkfun ESP32-C6 Thing Plus",
+      "category": "ESP32-C6",
+      "detail": "sparkfun_esp32c6_thing_plus",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "sparkfun_esp32c6_thing_plus",
+        "variant": "esp32c6"
+      }
+    },
+    {
+      "id": "waveshare_esp32_c6_geek",
+      "name": "Waveshare ESP32-C6-GEEK",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-C6-GEEK",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_c6_lcd_1_47",
+      "name": "Waveshare ESP32-C6-LCD-1.47",
+      "category": "ESP32-C6",
+      "detail": "esp32-c6-devkitc-1",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-c6-devkitc-1",
+        "variant": "esp32c6",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_module_dev_kit",
+      "name": "Waveshare ESP32-P4-Module-DEV-KIT",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-P4-Module-DEV-KIT",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_nano",
+      "name": "Waveshare ESP32-P4-Nano",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://devices.esphome.io/devices/Waveshare-ESP32-P4-Nano/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_pico",
+      "name": "Waveshare ESP32-P4-Pico",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-P4-Pico",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_wifi6",
+      "name": "Waveshare ESP32-P4-WIFI6",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-P4-WIFI6",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_wifi6_dev_kit",
+      "name": "Waveshare ESP32-P4-WIFI6-DEV-KIT (Rev1.1 and earlier)",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-P4-WIFI6-DEV-KIT",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_wifi6_poe_eth",
+      "name": "Waveshare ESP32-P4-WIFI6-POE-ETH",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://www.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    },
+    {
+      "id": "esp32-s2-kaluga-1",
+      "name": "Espressif ESP32-S2-Kaluga-1 Kit",
+      "category": "ESP32-S2",
+      "detail": "esp32-s2-kaluga-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s2-kaluga-1",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-s2-saola-1",
+      "name": "Espressif ESP32-S2-Saola-1",
+      "category": "ESP32-S2",
+      "detail": "esp32-s2-saola-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s2-saola-1",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "esp32-s2-franzininho",
+      "name": "Franzininho WiFi Board",
+      "category": "ESP32-S2",
+      "detail": "esp32-s2-franzininho",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s2-franzininho",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "esp32-s2-mini",
+      "name": "LOLIN S2 Mini",
+      "category": "ESP32-S2",
+      "detail": "lolin_s2_mini",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "lolin_s2_mini",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-s2-devkit-lipo",
+      "name": "OLIMEX ESP32-S2-DevKit-LiPo",
+      "category": "ESP32-S2",
+      "detail": "esp32-s2-saola-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s2-saola-1",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-s2-devkit-lipo-usb",
+      "name": "OLIMEX ESP32-S2-DevKit-LiPo-USB",
+      "category": "ESP32-S2",
+      "detail": "esp32-s2-saola-1",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-s2-saola-1",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "sensebox_mcu_esp32s2",
+      "name": "senseBox MCU-S2 ESP32-S2",
+      "category": "ESP32-S2",
+      "detail": "sensebox_mcu_esp32s2",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "sensebox_mcu_esp32s2",
+        "variant": "esp32s2"
+      }
+    },
+    {
+      "id": "sparkfun_esp32s2_thing_plus",
+      "name": "SparkFun ESP32-S2 Thing Plus",
+      "category": "ESP32-S2",
+      "detail": "sparkfun_esp32s2_thing_plus",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "sparkfun_esp32s2_thing_plus",
+        "variant": "esp32s2",
+        "framework": "esp-idf"
+      }
+    },
+    {
+      "id": "esp32-p4_r3-evboard",
+      "name": "Espressif ESP32-P4 Function EV Board v1.6 (rev.301)",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4_r3-evboard",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4_r3-evboard",
+        "variant": "esp32p4"
+      }
+    },
+    {
+      "id": "esp32-p4_r3",
+      "name": "Espressif ESP32-P4 rev.300 generic",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4_r3",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4_r3",
+        "variant": "esp32p4"
+      }
+    },
+    {
+      "id": "guition_esp32_p4_m3_dev",
+      "name": "Guition ESP32-P4-M3-Dev",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://devices.esphome.io/devices/Guition-ESP32-P4-M3-Dev/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "USB_SERIAL_JTAG"
+      }
+    },
+    {
+      "id": "m5stack-tab5-p4",
+      "name": "M5STACK Tab5 esp32-p4 Board (ES pre rev.300)",
+      "category": "ESP32-P4",
+      "detail": "m5stack-tab5-p4",
+      "docs_url": "https://esphome.io/components/esp32.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "m5stack-tab5-p4",
+        "variant": "esp32p4",
+        "engineering_sample": true
+      }
+    },
+    {
+      "id": "esp32-p4-pc",
+      "name": "OLIMEX ESP32-P4-PC",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4",
+      "docs_url": "https://esphome.io/components/ethernet.html",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true
+      }
+    },
+    {
+      "id": "waveshare_esp32_p4_eth",
+      "name": "Waveshare ESP32-P4-Eth",
+      "category": "ESP32-P4",
+      "detail": "esp32-p4-evboard",
+      "docs_url": "https://devices.esphome.io/devices/Waveshare-ESP32-P4-ETH/",
+      "esphome": {
+        "platform": "esp32",
+        "board": "esp32-p4-evboard",
+        "variant": "esp32p4",
+        "framework": "esp-idf",
+        "engineering_sample": true,
+        "logger_hardware_uart": "UART0"
+      }
+    }
+  ],
+  "sensors": [
+    {
+      "id": "sensor.a01nyub",
+      "name": "A01NYUB Waterproof Ultrasonic Sensor",
+      "category": "UART",
+      "detail": "sensor.a01nyub",
+      "docs_url": "https://esphome.io/components/sensor/a01nyub/"
+    },
+    {
+      "id": "sensor.a02yyuw",
+      "name": "A02YYUW Waterproof Ultrasonic Sensor",
+      "category": "UART",
+      "detail": "sensor.a02yyuw",
+      "docs_url": "https://esphome.io/components/sensor/a02yyuw/"
+    },
+    {
+      "id": "sensor.absolute_humidity",
+      "name": "Absolute Humidity",
+      "category": "GPIO / andet",
+      "detail": "sensor.absolute_humidity",
+      "docs_url": "https://esphome.io/components/sensor/absolute_humidity/"
+    },
+    {
+      "id": "sensor.adc",
+      "name": "Analog To Digital Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.adc",
+      "docs_url": "https://esphome.io/components/sensor/adc/"
+    },
+    {
+      "id": "sensor.adc128s102",
+      "name": "ADC128S102 8-Channel 12-Bit A/D Converter",
+      "category": "GPIO / andet",
+      "detail": "sensor.adc128s102",
+      "docs_url": "https://esphome.io/components/sensor/adc128s102/"
+    },
+    {
+      "id": "sensor.ade7880",
+      "name": "ADE7880 Power Sensor",
+      "category": "I2C",
+      "detail": "sensor.ade7880",
+      "docs_url": "https://esphome.io/components/sensor/ade7880/"
+    },
+    {
+      "id": "sensor.ade7953_i2c",
+      "name": "ADE7953 Power Sensor",
+      "category": "I2C",
+      "detail": "sensor.ade7953_i2c",
+      "docs_url": "https://esphome.io/components/sensor/ade7953/"
+    },
+    {
+      "id": "sensor.ade7953_spi",
+      "name": "ADE7953 Power Sensor",
+      "category": "SPI",
+      "detail": "sensor.ade7953_spi",
+      "docs_url": "https://esphome.io/components/sensor/ade7953/"
+    },
+    {
+      "id": "sensor.ads1115",
+      "name": "ADS1115 4-Channel 16-Bit A/D Converter",
+      "category": "GPIO / andet",
+      "detail": "sensor.ads1115",
+      "docs_url": "https://esphome.io/components/sensor/ads1115/"
+    },
+    {
+      "id": "sensor.ads1118",
+      "name": "ADS1118 4-Channel 16-Bit A/D Converter with Internal Temperature Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ads1118",
+      "docs_url": "https://esphome.io/components/sensor/ads1118/"
+    },
+    {
+      "id": "sensor.ags10",
+      "name": "AGS10 Volatile Organic Compound (VOC) Sensor",
+      "category": "I2C",
+      "detail": "sensor.ags10",
+      "docs_url": "https://esphome.io/components/sensor/ags10/"
+    },
+    {
+      "id": "sensor.aht10",
+      "name": "AHT10 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.aht10",
+      "docs_url": "https://esphome.io/components/sensor/aht10/"
+    },
+    {
+      "id": "sensor.airthings_wave_mini",
+      "name": "Airthings Wave Mini",
+      "category": "GPIO / andet",
+      "detail": "sensor.airthings_wave_mini",
+      "docs_url": "https://esphome.io/components/sensor/airthings_ble#airthings-wave-mini-sensor"
+    },
+    {
+      "id": "sensor.airthings_wave_plus",
+      "name": "Airthings Wave Plus",
+      "category": "GPIO / andet",
+      "detail": "sensor.airthings_wave_plus",
+      "docs_url": "https://esphome.io/components/sensor/airthings_ble#configuration-example"
+    },
+    {
+      "id": "sensor.alpha3",
+      "name": "Grundfos Alpha3",
+      "category": "GPIO / andet",
+      "detail": "sensor.alpha3",
+      "docs_url": "https://esphome.io/components/sensor/alpha3/"
+    },
+    {
+      "id": "sensor.am2315c",
+      "name": "AM2315C Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.am2315c",
+      "docs_url": "https://esphome.io/components/sensor/am2315c/"
+    },
+    {
+      "id": "sensor.am2320",
+      "name": "AM2320 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.am2320",
+      "docs_url": "https://esphome.io/components/sensor/am2320/"
+    },
+    {
+      "id": "sensor.am43",
+      "name": "AM43 Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.am43",
+      "docs_url": "https://esphome.io/components/sensor/am43/"
+    },
+    {
+      "id": "sensor.apds9306",
+      "name": "APDS9306 Sensor",
+      "category": "I2C",
+      "detail": "sensor.apds9306",
+      "docs_url": "https://esphome.io/components/sensor/apds9306/"
+    },
+    {
+      "id": "sensor.apds9960",
+      "name": "APDS9960 Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.apds9960",
+      "docs_url": "https://esphome.io/components/sensor/apds9960/"
+    },
+    {
+      "id": "sensor.aqi",
+      "name": "Air Quality Index (AQI)",
+      "category": "GPIO / andet",
+      "detail": "sensor.aqi",
+      "docs_url": "https://esphome.io/components/sensor/aqi/"
+    },
+    {
+      "id": "sensor.as3935",
+      "name": "AMS AS3935 Franklin Lightning Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.as3935",
+      "docs_url": "https://esphome.io/components/sensor/as3935/"
+    },
+    {
+      "id": "sensor.as5600",
+      "name": "AS5600 12-Bit Magnetic Position Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.as5600",
+      "docs_url": "https://esphome.io/components/sensor/as5600/"
+    },
+    {
+      "id": "sensor.as7341",
+      "name": "AS7341 Spectral Color Sensor",
+      "category": "I2C",
+      "detail": "sensor.as7341",
+      "docs_url": "https://esphome.io/components/sensor/as7341/"
+    },
+    {
+      "id": "sensor.atc_mithermometer",
+      "name": "ATC MiThermometer",
+      "category": "GPIO / andet",
+      "detail": "sensor.atc_mithermometer",
+      "docs_url": "https://esphome.io/components/sensor/atc_mithermometer/"
+    },
+    {
+      "id": "sensor.atm90e26",
+      "name": "ATM90E26 Power Sensor",
+      "category": "SPI",
+      "detail": "sensor.atm90e26",
+      "docs_url": "https://esphome.io/components/sensor/atm90e26/"
+    },
+    {
+      "id": "sensor.atm90e32",
+      "name": "ATM90E32 Power Sensor",
+      "category": "SPI",
+      "detail": "sensor.atm90e32",
+      "docs_url": "https://esphome.io/components/sensor/atm90e32/"
+    },
+    {
+      "id": "sensor.b_parasite",
+      "name": "b-parasite",
+      "category": "GPIO / andet",
+      "detail": "sensor.b_parasite",
+      "docs_url": "https://esphome.io/components/sensor/b_parasite/"
+    },
+    {
+      "id": "sensor.bedjet",
+      "name": "BedJet",
+      "category": "GPIO / andet",
+      "detail": "sensor.bedjet",
+      "docs_url": "https://esphome.io/components/climate/bedjet/"
+    },
+    {
+      "id": "sensor.bh1750",
+      "name": "BH1750 Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.bh1750",
+      "docs_url": "https://esphome.io/components/sensor/bh1750/"
+    },
+    {
+      "id": "sensor.bh1900nux",
+      "name": "BH1900NUX Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.bh1900nux",
+      "docs_url": "https://esphome.io/components/sensor/bh1900nux/"
+    },
+    {
+      "id": "sensor.binary_sensor_map",
+      "name": "Binary Sensor Map",
+      "category": "GPIO / andet",
+      "detail": "sensor.binary_sensor_map",
+      "docs_url": "https://esphome.io/components/sensor/binary_sensor_map/"
+    },
+    {
+      "id": "sensor.bl0906",
+      "name": "Belling BL0906 Energy Monitor",
+      "category": "UART",
+      "detail": "sensor.bl0906",
+      "docs_url": "https://esphome.io/components/sensor/bl0906/"
+    },
+    {
+      "id": "sensor.bl0939",
+      "name": "BL0939 Power Sensor",
+      "category": "UART",
+      "detail": "sensor.bl0939",
+      "docs_url": "https://esphome.io/components/sensor/bl0939/"
+    },
+    {
+      "id": "sensor.bl0940",
+      "name": "Belling BL0940 Energy Monitor",
+      "category": "UART",
+      "detail": "sensor.bl0940",
+      "docs_url": "https://esphome.io/components/sensor/bl0940/"
+    },
+    {
+      "id": "sensor.bl0942",
+      "name": "Belling BL0942 Energy Monitor",
+      "category": "UART",
+      "detail": "sensor.bl0942",
+      "docs_url": "https://esphome.io/components/sensor/bl0942/"
+    },
+    {
+      "id": "sensor.ble_client",
+      "name": "BLE Client Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ble_client",
+      "docs_url": "https://esphome.io/components/sensor/ble_client/"
+    },
+    {
+      "id": "sensor.ble_rssi",
+      "name": "Bluetooth Low Energy RSSI Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ble_rssi",
+      "docs_url": "https://esphome.io/components/sensor/ble_rssi/"
+    },
+    {
+      "id": "sensor.bme280_i2c",
+      "name": "BME280 Temperature+Pressure+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.bme280_i2c",
+      "docs_url": "https://esphome.io/components/sensor/bme280/"
+    },
+    {
+      "id": "sensor.bme280_spi",
+      "name": "BME280 Temperature+Pressure+Humidity Sensor",
+      "category": "SPI",
+      "detail": "sensor.bme280_spi",
+      "docs_url": "https://esphome.io/components/sensor/bme280/"
+    },
+    {
+      "id": "sensor.bme680",
+      "name": "BME680 Temperature+Pressure+Humidity+Gas Sensor",
+      "category": "I2C",
+      "detail": "sensor.bme680",
+      "docs_url": "https://esphome.io/components/sensor/bme680/"
+    },
+    {
+      "id": "sensor.bme680_bsec",
+      "name": "BME680 Temperature+Pressure+Humidity+Gas Sensor via BSEC",
+      "category": "GPIO / andet",
+      "detail": "sensor.bme680_bsec",
+      "docs_url": "https://esphome.io/components/sensor/bme680_bsec/"
+    },
+    {
+      "id": "sensor.bme68x_bsec2",
+      "name": "BME68x Temperature, Humidity, Pressure & Gas Sensor via BSEC2",
+      "category": "GPIO / andet",
+      "detail": "sensor.bme68x_bsec2",
+      "docs_url": "https://esphome.io/components/sensor/bme68x_bsec2/"
+    },
+    {
+      "id": "sensor.bmi160",
+      "name": "BMI160 Accelerometer/Gyroscope Sensor",
+      "category": "I2C",
+      "detail": "sensor.bmi160",
+      "docs_url": "https://esphome.io/components/sensor/bmi160/"
+    },
+    {
+      "id": "sensor.bmi270",
+      "name": "BMI270 Temperature Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.bmi270",
+      "docs_url": "https://esphome.io/components/sensor/bmi270/"
+    },
+    {
+      "id": "sensor.bmp085",
+      "name": "BMP085 Temperature+Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.bmp085",
+      "docs_url": "https://esphome.io/components/sensor/bmp085/"
+    },
+    {
+      "id": "sensor.bmp280_i2c",
+      "name": "BMP280 Temperature+Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.bmp280_i2c",
+      "docs_url": "https://esphome.io/components/sensor/bmp280/"
+    },
+    {
+      "id": "sensor.bmp280_spi",
+      "name": "BMP280 Temperature+Pressure Sensor",
+      "category": "SPI",
+      "detail": "sensor.bmp280_spi",
+      "docs_url": "https://esphome.io/components/sensor/bmp280/"
+    },
+    {
+      "id": "sensor.bmp3xx_i2c",
+      "name": "BMP388 / BMP390 Temperature+Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.bmp3xx_i2c",
+      "docs_url": "https://esphome.io/components/sensor/bmp3xx/"
+    },
+    {
+      "id": "sensor.bmp3xx_spi",
+      "name": "BMP388 / BMP390 Temperature+Pressure Sensor",
+      "category": "SPI",
+      "detail": "sensor.bmp3xx_spi",
+      "docs_url": "https://esphome.io/components/sensor/bmp3xx/"
+    },
+    {
+      "id": "sensor.bmp581_i2c",
+      "name": "BMP581 Temperature+Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.bmp581_i2c",
+      "docs_url": "https://esphome.io/components/sensor/bmp581/"
+    },
+    {
+      "id": "sensor.bmp581_spi",
+      "name": "BMP581 Temperature+Pressure Sensor",
+      "category": "SPI",
+      "detail": "sensor.bmp581_spi",
+      "docs_url": "https://esphome.io/components/sensor/bmp581/"
+    },
+    {
+      "id": "sensor.bthome_mithermometer",
+      "name": "BTHome MiThermometer Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.bthome_mithermometer",
+      "docs_url": "https://esphome.io/components/sensor/bthome_mithermometer/"
+    },
+    {
+      "id": "sensor.ccs811",
+      "name": "CCS811 eCO_2 and Volatile Organic Compound Sensor",
+      "category": "I2C",
+      "detail": "sensor.ccs811",
+      "docs_url": "https://esphome.io/components/sensor/ccs811/"
+    },
+    {
+      "id": "sensor.cd74hc4067",
+      "name": "cd74hc4067 Analog Multiplexer",
+      "category": "GPIO / andet",
+      "detail": "sensor.cd74hc4067",
+      "docs_url": "https://esphome.io/components/sensor/cd74hc4067/"
+    },
+    {
+      "id": "sensor.cm1106",
+      "name": "CUBIC CM1106 Single Beam NDIR CO2 Sensor Module",
+      "category": "UART",
+      "detail": "sensor.cm1106",
+      "docs_url": "https://esphome.io/components/sensor/cm1106/"
+    },
+    {
+      "id": "sensor.combination",
+      "name": "Combine the state of several sensors",
+      "category": "GPIO / andet",
+      "detail": "sensor.combination",
+      "docs_url": "https://esphome.io/components/sensor/combination/"
+    },
+    {
+      "id": "sensor.copy",
+      "name": "Copy Component",
+      "category": "GPIO / andet",
+      "detail": "sensor.copy",
+      "docs_url": "https://esphome.io/components/copy"
+    },
+    {
+      "id": "sensor.counter",
+      "name": "Counter Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.counter",
+      "docs_url": ""
+    },
+    {
+      "id": "sensor.cs5460a",
+      "name": "CS5460A Power Sensor",
+      "category": "SPI",
+      "detail": "sensor.cs5460a",
+      "docs_url": "https://esphome.io/components/sensor/cs5460a/"
+    },
+    {
+      "id": "sensor.cse7761",
+      "name": "CSE7761 Power Sensor",
+      "category": "UART",
+      "detail": "sensor.cse7761",
+      "docs_url": "https://esphome.io/components/sensor/cse7761/"
+    },
+    {
+      "id": "sensor.cse7766",
+      "name": "CSE7766 Power Sensor",
+      "category": "UART",
+      "detail": "sensor.cse7766",
+      "docs_url": "https://esphome.io/components/sensor/cse7766/"
+    },
+    {
+      "id": "sensor.ct_clamp",
+      "name": "CT Clamp Current Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ct_clamp",
+      "docs_url": "https://esphome.io/components/sensor/ct_clamp/"
+    },
+    {
+      "id": "sensor.d01",
+      "name": "D01 Particulate Matter Sensor",
+      "category": "UART",
+      "detail": "sensor.d01",
+      "docs_url": "https://esphome.io/components/sensor/d01/"
+    },
+    {
+      "id": "sensor.dallas_temp",
+      "name": "Dallas Temperature Sensor",
+      "category": "ONE_WIRE",
+      "detail": "sensor.dallas_temp",
+      "docs_url": "https://esphome.io/components/sensor/dallas_temp/"
+    },
+    {
+      "id": "sensor.daly_bms",
+      "name": "Daly BMS Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.daly_bms",
+      "docs_url": "https://esphome.io/components/sensor/daly_bms/"
+    },
+    {
+      "id": "sensor.debug",
+      "name": "Debug Component",
+      "category": "GPIO / andet",
+      "detail": "sensor.debug",
+      "docs_url": "https://esphome.io/components/debug"
+    },
+    {
+      "id": "sensor.dew_point",
+      "name": "Dew Point",
+      "category": "GPIO / andet",
+      "detail": "sensor.dew_point",
+      "docs_url": "https://esphome.io/components/sensor/dew_point/"
+    },
+    {
+      "id": "sensor.dht",
+      "name": "DHT Temperature+Humidity Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.dht",
+      "docs_url": "https://esphome.io/components/sensor/dht/"
+    },
+    {
+      "id": "sensor.dht12",
+      "name": "DHT12 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.dht12",
+      "docs_url": "https://esphome.io/components/sensor/dht12/"
+    },
+    {
+      "id": "sensor.dlms_meter",
+      "name": "DLMS Meter",
+      "category": "GPIO / andet",
+      "detail": "sensor.dlms_meter",
+      "docs_url": "https://esphome.io/components/sensor/dlms_meter/"
+    },
+    {
+      "id": "sensor.dps310",
+      "name": "DPS310/DPS368 Atmospheric Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.dps310",
+      "docs_url": "https://esphome.io/components/sensor/dps310/"
+    },
+    {
+      "id": "sensor.ds1603l",
+      "name": "DS1603L Ultrasonic Distance Sensor",
+      "category": "UART",
+      "detail": "sensor.ds1603l",
+      "docs_url": "https://esphome.io/components/sensor/ds1603l/"
+    },
+    {
+      "id": "sensor.dsmr",
+      "name": "DSMR Component",
+      "category": "UART",
+      "detail": "sensor.dsmr",
+      "docs_url": "https://esphome.io/components/sensor/dsmr/"
+    },
+    {
+      "id": "sensor.duty_cycle",
+      "name": "Duty Cycle Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.duty_cycle",
+      "docs_url": "https://esphome.io/components/sensor/duty_cycle/"
+    },
+    {
+      "id": "sensor.duty_time",
+      "name": "Duty Time",
+      "category": "GPIO / andet",
+      "detail": "sensor.duty_time",
+      "docs_url": "https://esphome.io/components/sensor/duty_time/"
+    },
+    {
+      "id": "sensor.ee895",
+      "name": "EE895 CO₂, Temperature and Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.ee895",
+      "docs_url": "https://esphome.io/components/sensor/ee895/"
+    },
+    {
+      "id": "sensor.emc2101",
+      "name": "EMC2101 Fan Controller and Temperature sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.emc2101",
+      "docs_url": "https://esphome.io/components/emc2101"
+    },
+    {
+      "id": "sensor.emontx",
+      "name": "OpenEnergyMonitor EmonTx Sensors",
+      "category": "GPIO / andet",
+      "detail": "sensor.emontx",
+      "docs_url": "https://esphome.io/components/sensor/emontx/"
+    },
+    {
+      "id": "sensor.ens160_i2c",
+      "name": "ENS160 Volatile Organic Compound (VOC) and eCO₂ Sensor",
+      "category": "I2C",
+      "detail": "sensor.ens160_i2c",
+      "docs_url": "https://esphome.io/components/sensor/ens160/"
+    },
+    {
+      "id": "sensor.ens160_spi",
+      "name": "ENS160 Volatile Organic Compound (VOC) and eCO₂ Sensor",
+      "category": "SPI",
+      "detail": "sensor.ens160_spi",
+      "docs_url": "https://esphome.io/components/sensor/ens160/"
+    },
+    {
+      "id": "sensor.ens210",
+      "name": "ENS210 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.ens210",
+      "docs_url": "https://esphome.io/components/sensor/ens210/"
+    },
+    {
+      "id": "sensor.espectre",
+      "name": "ESPectre Wi-Fi Motion Detection",
+      "category": "GPIO / andet",
+      "detail": "sensor.espectre",
+      "docs_url": ""
+    },
+    {
+      "id": "sensor.exponential_moving_average",
+      "name": "Exponential Moving Average Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.exponential_moving_average",
+      "docs_url": "https://esphome.io/components/sensor/filter/exponential_moving_average"
+    },
+    {
+      "id": "sensor.ezo",
+      "name": "EZO sensor circuits",
+      "category": "I2C",
+      "detail": "sensor.ezo",
+      "docs_url": "https://esphome.io/components/sensor/ezo/"
+    },
+    {
+      "id": "sensor.ezo_pmp",
+      "name": "Atlas Scientific Peristaltic Pump",
+      "category": "GPIO / andet",
+      "detail": "sensor.ezo_pmp",
+      "docs_url": "https://esphome.io/components/ezo_pmp/"
+    },
+    {
+      "id": "sensor.fingerprint_grow",
+      "name": "Grow Fingerprint Reader",
+      "category": "GPIO / andet",
+      "detail": "sensor.fingerprint_grow",
+      "docs_url": "https://esphome.io/components/fingerprint_grow"
+    },
+    {
+      "id": "sensor.fs3000",
+      "name": "FS3000 Air Velocity Sensor",
+      "category": "I2C",
+      "detail": "sensor.fs3000",
+      "docs_url": "https://esphome.io/components/sensor/fs3000/"
+    },
+    {
+      "id": "sensor.gcja5",
+      "name": "Panasonic SN-GCJA5 Particulate Matter Sensor",
+      "category": "UART",
+      "detail": "sensor.gcja5",
+      "docs_url": "https://esphome.io/components/sensor/gcja5/"
+    },
+    {
+      "id": "sensor.gdk101",
+      "name": "FTLab GDK101 Gamma Radiation Sensor Module",
+      "category": "GPIO / andet",
+      "detail": "sensor.gdk101",
+      "docs_url": "https://esphome.io/components/sensor/gdk101/"
+    },
+    {
+      "id": "sensor.gl_r01_i2c",
+      "name": "GL-R01 I²C - Time Of Flight Mini LiDAR Laser Ranging Sensor",
+      "category": "I2C",
+      "detail": "sensor.gl_r01_i2c",
+      "docs_url": "https://esphome.io/components/sensor/gl_r01/"
+    },
+    {
+      "id": "sensor.gp2y1010au0f",
+      "name": "Sharp GP2Y1010AU0F PM2.5 Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.gp2y1010au0f",
+      "docs_url": "https://esphome.io/components/sensor/gp2y1010au0f/"
+    },
+    {
+      "id": "sensor.grove_gas_mc_v2",
+      "name": "Grove Multichannel Gas Sensor V2",
+      "category": "I2C",
+      "detail": "sensor.grove_gas_mc_v2",
+      "docs_url": "https://esphome.io/components/sensor/grove_gas_mc_v2/"
+    },
+    {
+      "id": "sensor.growatt_solar",
+      "name": "Growatt Solar",
+      "category": "UART",
+      "detail": "sensor.growatt_solar",
+      "docs_url": "https://esphome.io/components/sensor/growatt_solar/"
+    },
+    {
+      "id": "sensor.haier",
+      "name": "Haier Climate Sensors",
+      "category": "GPIO / andet",
+      "detail": "sensor.haier",
+      "docs_url": "https://esphome.io/components/sensor/haier/"
+    },
+    {
+      "id": "sensor.havells_solar",
+      "name": "Havells Solar",
+      "category": "UART",
+      "detail": "sensor.havells_solar",
+      "docs_url": "https://esphome.io/components/sensor/havells_solar/"
+    },
+    {
+      "id": "sensor.hc8",
+      "name": "HC8 CO₂ Sensor",
+      "category": "UART",
+      "detail": "sensor.hc8",
+      "docs_url": "https://esphome.io/components/sensor/hc8/"
+    },
+    {
+      "id": "sensor.hdc1080",
+      "name": "HDC1080 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.hdc1080",
+      "docs_url": "https://esphome.io/components/sensor/hdc1080/"
+    },
+    {
+      "id": "sensor.hdc2010",
+      "name": "HDC2010 High Precision Temperature and Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.hdc2010",
+      "docs_url": "https://esphome.io/components/sensor/hdc2010/"
+    },
+    {
+      "id": "sensor.hdc2080",
+      "name": "HDC2080 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.hdc2080",
+      "docs_url": "https://esphome.io/components/sensor/hdc2080/"
+    },
+    {
+      "id": "sensor.hdc302x",
+      "name": "HDC302x Temperature and Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.hdc302x",
+      "docs_url": "https://esphome.io/components/sensor/hdc302x/"
+    },
+    {
+      "id": "sensor.honeywell_hih_i2c",
+      "name": "Honeywell HumidIcon (I2C HIH series) Temperature & Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.honeywell_hih_i2c",
+      "docs_url": "https://esphome.io/components/sensor/honeywell_hih_i2c/"
+    },
+    {
+      "id": "sensor.hte501",
+      "name": "HTE501 Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.hte501",
+      "docs_url": "https://esphome.io/components/sensor/hte501/"
+    },
+    {
+      "id": "sensor.htu21d",
+      "name": "HTU21D | Si7021 | SHT21 Temperature & Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.htu21d",
+      "docs_url": "https://esphome.io/components/sensor/htu21d/"
+    },
+    {
+      "id": "sensor.htu31d",
+      "name": "HTU31D Temperature & Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.htu31d",
+      "docs_url": "https://esphome.io/components/sensor/htu31d/"
+    },
+    {
+      "id": "sensor.hyt271",
+      "name": "HYT271 Temperature & Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.hyt271",
+      "docs_url": "https://esphome.io/components/sensor/hyt271/"
+    },
+    {
+      "id": "sensor.internal_temperature",
+      "name": "Internal Temperature Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.internal_temperature",
+      "docs_url": "https://esphome.io/components/sensor/internal_temperature/"
+    },
+    {
+      "id": "sensor.kmeteriso",
+      "name": "M5Stack KMeterISO I2C K-Type probe temperature sensor",
+      "category": "I2C",
+      "detail": "sensor.kmeteriso",
+      "docs_url": "https://esphome.io/components/sensor/kmeteriso/"
+    },
+    {
+      "id": "sensor.lm75b",
+      "name": "LM75B Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.lm75b",
+      "docs_url": "https://esphome.io/components/sensor/lm75b/"
+    },
+    {
+      "id": "sensor.lsm6ds",
+      "name": "LSM6DS Temperature Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.lsm6ds",
+      "docs_url": "https://esphome.io/components/sensor/lsm6ds/"
+    },
+    {
+      "id": "sensor.max31855",
+      "name": "MAX31855 K-Type Thermocouple Temperature Sensor",
+      "category": "SPI",
+      "detail": "sensor.max31855",
+      "docs_url": "https://esphome.io/components/sensor/max31855/"
+    },
+    {
+      "id": "sensor.max31856",
+      "name": "MAX31856 Thermocouple Temperature Sensor",
+      "category": "SPI",
+      "detail": "sensor.max31856",
+      "docs_url": "https://esphome.io/components/sensor/max31856/"
+    },
+    {
+      "id": "sensor.max31865",
+      "name": "MAX31865 Platinum RTD Temperature Sensor",
+      "category": "SPI",
+      "detail": "sensor.max31865",
+      "docs_url": "https://esphome.io/components/sensor/max31865/"
+    },
+    {
+      "id": "sensor.max6675",
+      "name": "MAX6675 K-Type Thermocouple Temperature Sensor",
+      "category": "SPI",
+      "detail": "sensor.max6675",
+      "docs_url": "https://esphome.io/components/sensor/max6675/"
+    },
+    {
+      "id": "sensor.max9611",
+      "name": "MAX9611/9612 High Side Current+Voltage+Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.max9611",
+      "docs_url": "https://esphome.io/components/sensor/max9611/"
+    },
+    {
+      "id": "sensor.mcp9808",
+      "name": "MCP9808 Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.mcp9808",
+      "docs_url": "https://esphome.io/components/sensor/mcp9808/"
+    },
+    {
+      "id": "sensor.mhz19",
+      "name": "MH-Z19 CO_2 and Temperature Sensor",
+      "category": "UART",
+      "detail": "sensor.mhz19",
+      "docs_url": "https://esphome.io/components/sensor/mhz19/"
+    },
+    {
+      "id": "sensor.mpl3115a2",
+      "name": "MPL3115A2 Barometric Pressure/Altitude/Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.mpl3115a2",
+      "docs_url": "https://esphome.io/components/sensor/mpl3115a2/"
+    },
+    {
+      "id": "sensor.ms8607",
+      "name": "MS8607 Temperature+Pressure+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.ms8607",
+      "docs_url": "https://esphome.io/components/sensor/ms8607/"
+    },
+    {
+      "id": "sensor.pmwcs3",
+      "name": "PMWCS3 Capacitive Soil Moisture and Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.pmwcs3",
+      "docs_url": "https://esphome.io/components/sensor/pmwcs3/"
+    },
+    {
+      "id": "sensor.qmi8658",
+      "name": "QMI8658 Temperature Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.qmi8658",
+      "docs_url": "https://esphome.io/components/sensor/qmi8658/"
+    },
+    {
+      "id": "sensor.qmp6988",
+      "name": "QMP6988 Temperature+Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.qmp6988",
+      "docs_url": "https://esphome.io/components/sensor/qmp6988/"
+    },
+    {
+      "id": "sensor.scd30",
+      "name": "SCD30 CO₂, Temperature and Relative Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.scd30",
+      "docs_url": "https://esphome.io/components/sensor/scd30/"
+    },
+    {
+      "id": "sensor.scd4x",
+      "name": "SCD4X CO₂, Temperature and Relative Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.scd4x",
+      "docs_url": "https://esphome.io/components/sensor/scd4x/"
+    },
+    {
+      "id": "sensor.sht3xd",
+      "name": "SHT3X-D Temperature+Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.sht3xd",
+      "docs_url": "https://esphome.io/components/sensor/sht3xd/"
+    },
+    {
+      "id": "sensor.sht4x",
+      "name": "SHT4X Temperature and Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.sht4x",
+      "docs_url": "https://esphome.io/components/sensor/sht4x/"
+    },
+    {
+      "id": "sensor.shtcx",
+      "name": "SHTCx Temperature+Humidity Sensors",
+      "category": "I2C",
+      "detail": "sensor.shtcx",
+      "docs_url": "https://esphome.io/components/sensor/shtcx/"
+    },
+    {
+      "id": "sensor.spa06_i2c",
+      "name": "SPA06-003 Temperature+Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.spa06_i2c",
+      "docs_url": "https://esphome.io/components/sensor/spa06/"
+    },
+    {
+      "id": "sensor.spa06_spi",
+      "name": "SPA06-003 Temperature+Pressure Sensor",
+      "category": "SPI",
+      "detail": "sensor.spa06_spi",
+      "docs_url": "https://esphome.io/components/sensor/spa06/"
+    },
+    {
+      "id": "sensor.stcc4",
+      "name": "STCC4 CO₂, Temperature and Relative Humidity Sensor",
+      "category": "I2C",
+      "detail": "sensor.stcc4",
+      "docs_url": ""
+    },
+    {
+      "id": "sensor.sts3x",
+      "name": "STS3X Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.sts3x",
+      "docs_url": "https://esphome.io/components/sensor/sts3x/"
+    },
+    {
+      "id": "sensor.stts22h",
+      "name": "STTS22H Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.stts22h",
+      "docs_url": "https://esphome.io/components/sensor/stts22h/"
+    },
+    {
+      "id": "sensor.tc74",
+      "name": "TC74 Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.tc74",
+      "docs_url": "https://esphome.io/components/sensor/tc74/"
+    },
+    {
+      "id": "sensor.tee501",
+      "name": "TEE501 Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.tee501",
+      "docs_url": "https://esphome.io/components/sensor/tee501/"
+    },
+    {
+      "id": "sensor.tmp102",
+      "name": "TMP102 Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.tmp102",
+      "docs_url": "https://esphome.io/components/sensor/tmp102/"
+    },
+    {
+      "id": "sensor.tmp1075",
+      "name": "TMP1075 Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.tmp1075",
+      "docs_url": "https://esphome.io/components/sensor/tmp1075/"
+    },
+    {
+      "id": "sensor.tmp117",
+      "name": "TMP117 Temperature Sensor",
+      "category": "I2C",
+      "detail": "sensor.tmp117",
+      "docs_url": "https://esphome.io/components/sensor/tmp117/"
+    },
+    {
+      "id": "sensor.wts01",
+      "name": "WTS01 Temperature Sensor",
+      "category": "UART",
+      "detail": "sensor.wts01",
+      "docs_url": "https://esphome.io/components/sensor/wts01/"
+    },
+    {
+      "id": "sensor.zyaura",
+      "name": "ZyAura CO2 & Temperature & Humidity Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.zyaura",
+      "docs_url": "https://esphome.io/components/sensor/zyaura/"
+    },
+    {
+      "id": "sensor.honeywellabp",
+      "name": "Honeywell ABP Pressure Sensors",
+      "category": "SPI",
+      "detail": "sensor.honeywellabp",
+      "docs_url": "https://esphome.io/components/sensor/honeywellabp/"
+    },
+    {
+      "id": "sensor.honeywellabp2_i2c",
+      "name": "Honeywell ABP 2 Pressure Sensors",
+      "category": "I2C",
+      "detail": "sensor.honeywellabp2_i2c",
+      "docs_url": "https://esphome.io/components/sensor/honeywellabp2_i2c/"
+    },
+    {
+      "id": "sensor.inkbird_ibsth1_mini",
+      "name": "Inkbird IBS-TH1, IBS-TH1 Mini, and IBS-TH2 BLE Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.inkbird_ibsth1_mini",
+      "docs_url": "https://esphome.io/components/sensor/inkbird_ibsth1_mini/"
+    },
+    {
+      "id": "sensor.mcp9600",
+      "name": "MCP9600 Thermocouple Amplifier",
+      "category": "I2C",
+      "detail": "sensor.mcp9600",
+      "docs_url": "https://esphome.io/components/sensor/mcp9600/"
+    },
+    {
+      "id": "sensor.mlx90614",
+      "name": "MLX90614  non-contact thermometer",
+      "category": "I2C",
+      "detail": "sensor.mlx90614",
+      "docs_url": "https://esphome.io/components/sensor/mlx90614/"
+    },
+    {
+      "id": "sensor.mopeka_pro_check",
+      "name": "Mopeka Pro Check BLE Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.mopeka_pro_check",
+      "docs_url": "https://esphome.io/components/sensor/mopeka_pro_check/"
+    },
+    {
+      "id": "sensor.mopeka_std_check",
+      "name": "Mopeka Standard Check BLE Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.mopeka_std_check",
+      "docs_url": "https://esphome.io/components/sensor/mopeka_std_check/"
+    },
+    {
+      "id": "sensor.ms5611",
+      "name": "MS5611 Atmospheric Pressure Sensor",
+      "category": "I2C",
+      "detail": "sensor.ms5611",
+      "docs_url": "https://esphome.io/components/sensor/ms5611/"
+    },
+    {
+      "id": "sensor.ntc",
+      "name": "NTC Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ntc",
+      "docs_url": "https://esphome.io/components/sensor/ntc/"
+    },
+    {
+      "id": "sensor.ruuvitag",
+      "name": "RuuviTag Open Source BLE Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ruuvitag",
+      "docs_url": "https://esphome.io/components/sensor/ruuvitag/"
+    },
+    {
+      "id": "sensor.sfa40",
+      "name": "SFA40 Formaldehyde Sensor",
+      "category": "I2C",
+      "detail": "sensor.sfa40",
+      "docs_url": "https://esphome.io/components/sensor/sfa40/"
+    },
+    {
+      "id": "sensor.smt100",
+      "name": "SMT100 Soil Moisture Sensor",
+      "category": "UART",
+      "detail": "sensor.smt100",
+      "docs_url": "https://esphome.io/components/sensor/smt100/"
+    },
+    {
+      "id": "sensor.sun_gtil2",
+      "name": "SUN_GTIL2 Grid Tie Inverter",
+      "category": "UART",
+      "detail": "sensor.sun_gtil2",
+      "docs_url": "https://esphome.io/components/sun_gtil2/"
+    },
+    {
+      "id": "sensor.tcs34725",
+      "name": "TCS34725 RGB Color Sensor",
+      "category": "I2C",
+      "detail": "sensor.tcs34725",
+      "docs_url": "https://esphome.io/components/sensor/tcs34725/"
+    },
+    {
+      "id": "sensor.thermopro_ble",
+      "name": "ThermoPro BLE Sensors",
+      "category": "GPIO / andet",
+      "detail": "sensor.thermopro_ble",
+      "docs_url": "https://esphome.io/components/sensor/thermopro_ble/"
+    },
+    {
+      "id": "sensor.tfluna",
+      "name": "TF-Luna LiDAR Distance Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.tfluna",
+      "docs_url": ""
+    },
+    {
+      "id": "sensor.tof10120",
+      "name": "TOF10120 Time Of Flight Distance Sensor",
+      "category": "I2C",
+      "detail": "sensor.tof10120",
+      "docs_url": "https://esphome.io/components/sensor/tof10120/"
+    },
+    {
+      "id": "sensor.ultrasonic",
+      "name": "Ultrasonic Distance Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ultrasonic",
+      "docs_url": "https://esphome.io/components/sensor/ultrasonic/"
+    },
+    {
+      "id": "sensor.vl53l0x",
+      "name": "VL53L0X Time Of Flight Distance Sensor",
+      "category": "I2C",
+      "detail": "sensor.vl53l0x",
+      "docs_url": "https://esphome.io/components/sensor/vl53l0x/"
+    },
+    {
+      "id": "sensor.zio_ultrasonic",
+      "name": "Zio Ultrasonic Distance Sensor",
+      "category": "I2C",
+      "detail": "sensor.zio_ultrasonic",
+      "docs_url": "https://esphome.io/components/sensor/zio_ultrasonic/"
+    },
+    {
+      "id": "sensor.hrxl_maxsonar_wr",
+      "name": "HRXL/XL MaxSonar WR Series",
+      "category": "UART",
+      "detail": "sensor.hrxl_maxsonar_wr",
+      "docs_url": "https://esphome.io/components/sensor/hrxl_maxsonar_wr/"
+    },
+    {
+      "id": "sensor.jsn_sr04t",
+      "name": "JSN-SR04T Waterproof Ultrasonic Range Finder",
+      "category": "UART",
+      "detail": "sensor.jsn_sr04t",
+      "docs_url": "https://esphome.io/components/sensor/jsn_sr04t/"
+    },
+    {
+      "id": "sensor.ld2420",
+      "name": "LD2420 24GHz mmWave Radar Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ld2420",
+      "docs_url": "https://esphome.io/components/sensor/ld2420/"
+    },
+    {
+      "id": "binary_sensor.ld6002b",
+      "name": "LD6002B 3D Presence Radar",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.ld6002b",
+      "docs_url": "https://esphome.io/components/sensor/ld6002b/"
+    },
+    {
+      "id": "sensor.ld6002b",
+      "name": "LD6002B 3D Presence Radar",
+      "category": "GPIO / andet",
+      "detail": "sensor.ld6002b",
+      "docs_url": "https://esphome.io/components/sensor/ld6002b/"
+    },
+    {
+      "id": "binary_sensor.ble_presence",
+      "name": "Bluetooth Low Energy Device",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.ble_presence",
+      "docs_url": "https://esphome.io/components/binary_sensor/ble_presence/"
+    },
+    {
+      "id": "binary_sensor.dfrobot_sen0395",
+      "name": "DFRobot mmWave Radar",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.dfrobot_sen0395",
+      "docs_url": "https://esphome.io/components/dfrobot_sen0395/"
+    },
+    {
+      "id": "binary_sensor.ld2420",
+      "name": "LD2420 24GHz mmWave Radar Sensor",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.ld2420",
+      "docs_url": "https://esphome.io/components/sensor/ld2420/"
+    },
+    {
+      "id": "binary_sensor.ld2450",
+      "name": "LD2450 Sensor",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.ld2450",
+      "docs_url": "https://esphome.io/components/sensor/ld2450/"
+    },
+    {
+      "id": "binary_sensor.rd03d",
+      "name": "RD-03D mmWave Radar",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.rd03d",
+      "docs_url": "https://esphome.io/components/sensor/rd03d/"
+    },
+    {
+      "id": "binary_sensor.seeed_mr60bha2",
+      "name": "Seeed Studio MR60BHA2 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.seeed_mr60bha2",
+      "docs_url": "https://esphome.io/components/seeed_mr60bha2/"
+    },
+    {
+      "id": "binary_sensor.seeed_mr60fda2",
+      "name": "Seeed Studio MR60FDA2 60GHz mmWave Fall Detection Sensor Kit",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.seeed_mr60fda2",
+      "docs_url": "https://esphome.io/components/seeed_mr60fda2/"
+    },
+    {
+      "id": "sensor.t6615",
+      "name": "T6613/15 CO2 Sensors",
+      "category": "UART",
+      "detail": "sensor.t6615",
+      "docs_url": "https://esphome.io/components/sensor/t6615/"
+    },
+    {
+      "id": "sensor.hlw8012",
+      "name": "HLW8012 Power Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.hlw8012",
+      "docs_url": "https://esphome.io/components/sensor/hlw8012/"
+    },
+    {
+      "id": "sensor.hlw8032",
+      "name": "HLW8032 Power Sensor",
+      "category": "UART",
+      "detail": "sensor.hlw8032",
+      "docs_url": "https://esphome.io/components/sensor/hlw8032/"
+    },
+    {
+      "id": "sensor.ina226",
+      "name": "INA226 DC current and power sensor",
+      "category": "I2C",
+      "detail": "sensor.ina226",
+      "docs_url": "https://esphome.io/components/sensor/ina226/"
+    },
+    {
+      "id": "sensor.ina260",
+      "name": "INA260 DC Current and Power sensor",
+      "category": "I2C",
+      "detail": "sensor.ina260",
+      "docs_url": "https://esphome.io/components/sensor/ina260/"
+    },
+    {
+      "id": "sensor.ina2xx_i2c",
+      "name": "INA2xx family of digital power monitors",
+      "category": "I2C",
+      "detail": "sensor.ina2xx_i2c",
+      "docs_url": "https://esphome.io/components/sensor/ina2xx/"
+    },
+    {
+      "id": "sensor.ina2xx_spi",
+      "name": "INA2xx family of digital power monitors",
+      "category": "SPI",
+      "detail": "sensor.ina2xx_spi",
+      "docs_url": "https://esphome.io/components/sensor/ina2xx/"
+    },
+    {
+      "id": "sensor.pzem004t",
+      "name": "Peacefair PZEM-004T Energy Monitor",
+      "category": "UART",
+      "detail": "sensor.pzem004t",
+      "docs_url": "https://esphome.io/components/sensor/pzem004t/"
+    },
+    {
+      "id": "sensor.pzem6l24",
+      "name": "Peacefair PZEM-6L24 Three-Phase Energy Monitor",
+      "category": "UART",
+      "detail": "sensor.pzem6l24",
+      "docs_url": ""
+    },
+    {
+      "id": "sensor.total_daily_energy",
+      "name": "Total Daily Energy Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.total_daily_energy",
+      "docs_url": "https://esphome.io/components/sensor/total_daily_energy/"
+    },
+    {
+      "id": "binary_sensor.as3935",
+      "name": "AMS AS3935 Franklin Lightning Sensor",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.as3935",
+      "docs_url": "https://esphome.io/components/sensor/as3935/"
+    },
+    {
+      "id": "sensor.ltr390",
+      "name": "LTR390 UV and Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.ltr390",
+      "docs_url": "https://esphome.io/components/sensor/ltr390/"
+    },
+    {
+      "id": "sensor.ltr501",
+      "name": "Lite-On Ambient Light & Proximity Sensors",
+      "category": "I2C",
+      "detail": "sensor.ltr501",
+      "docs_url": "https://esphome.io/components/sensor/ltr501/"
+    },
+    {
+      "id": "sensor.ltr_als_ps",
+      "name": "Lite-On Ambient Light & Proximity Sensors",
+      "category": "I2C",
+      "detail": "sensor.ltr_als_ps",
+      "docs_url": "https://esphome.io/components/sensor/ltr_als_ps/"
+    },
+    {
+      "id": "sensor.max44009",
+      "name": "MAX44009 Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.max44009",
+      "docs_url": "https://esphome.io/components/sensor/max44009/"
+    },
+    {
+      "id": "sensor.opt3001",
+      "name": "OPT3001 Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.opt3001",
+      "docs_url": "https://esphome.io/components/sensor/opt3001/"
+    },
+    {
+      "id": "sensor.tsl2561",
+      "name": "TSL2561 Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.tsl2561",
+      "docs_url": "https://esphome.io/components/sensor/tsl2561/"
+    },
+    {
+      "id": "sensor.tsl2591",
+      "name": "TSL2591 Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.tsl2591",
+      "docs_url": "https://esphome.io/components/sensor/tsl2591/"
+    },
+    {
+      "id": "sensor.veml3235",
+      "name": "VEML3235 Ambient Light Sensor",
+      "category": "I2C",
+      "detail": "sensor.veml3235",
+      "docs_url": "https://esphome.io/components/sensor/veml3235/"
+    },
+    {
+      "id": "sensor.veml7700",
+      "name": "VEML7700 and VEML6030 Ambient Light Sensors",
+      "category": "I2C",
+      "detail": "sensor.veml7700",
+      "docs_url": "https://esphome.io/components/sensor/veml7700/"
+    },
+    {
+      "id": "sensor.xiaomi_hhccjcy10",
+      "name": "HHCCJCY10 Xiaomi MiFlora (Pink version)",
+      "category": "GPIO / andet",
+      "detail": "sensor.xiaomi_hhccjcy10",
+      "docs_url": "https://esphome.io/components/sensor/xiaomi_hhccjcy10/"
+    },
+    {
+      "id": "binary_sensor.ld2410",
+      "name": "LD2410 Sensor",
+      "category": "GPIO / andet",
+      "detail": "binary_sensor.ld2410",
+      "docs_url": "https://esphome.io/components/sensor/ld2410/"
+    },
+    {
+      "id": "sensor.ld2410",
+      "name": "LD2410 Sensor",
+      "category": "GPIO / andet",
+      "detail": "sensor.ld2410",
+      "docs_url": "https://esphome.io/components/sensor/ld2410/"
+    },
+    {
+      "id": "sensor.sps30",
+      "name": "SPS30 Particulate Matter Sensor",
+      "category": "I2C",
+      "detail": "sensor.sps30",
+      "docs_url": "https://esphome.io/components/sensor/sps30/"
+    },
+    {
+      "id": "sensor.pmsa003i",
+      "name": "PMSA003I Particulate Matter Sensor",
+      "category": "I2C",
+      "detail": "sensor.pmsa003i",
+      "docs_url": "https://esphome.io/components/sensor/pmsa003i/"
+    },
+    {
+      "id": "sensor.pmsx003",
+      "name": "PMSX003 Particulate Matter Sensor",
+      "category": "UART",
+      "detail": "sensor.pmsx003",
+      "docs_url": "https://esphome.io/components/sensor/pmsx003/"
+    },
+    {
+      "id": "sensor.mpu6050",
+      "name": "MPU6050 Accelerometer/Gyroscope Sensor",
+      "category": "I2C",
+      "detail": "sensor.mpu6050",
+      "docs_url": "https://esphome.io/components/sensor/mpu6050/"
+    },
+    {
+      "id": "sensor.mpu6886",
+      "name": "MPU6886 Accelerometer/Gyroscope Sensor",
+      "category": "I2C",
+      "detail": "sensor.mpu6886",
+      "docs_url": "https://esphome.io/components/sensor/mpu6886/"
+    },
+    {
+      "id": "sensor.hx711",
+      "name": "HX711 Load Cell Amplifier",
+      "category": "GPIO / andet",
+      "detail": "sensor.hx711",
+      "docs_url": "https://esphome.io/components/sensor/hx711/"
+    }
+  ]
+}

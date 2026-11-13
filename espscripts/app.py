@@ -14,6 +14,7 @@ from werkzeug.exceptions import HTTPException
 WEB = Path(__file__).resolve().parent / 'web'
 app = Flask(__name__, static_folder=str(WEB), static_url_path='/static')
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024 * 1024
+BUILTIN_CATALOG = json.loads((WEB.parent / 'catalog.json').read_text())
 app.config['DB'] = os.environ.get('ESPSCRIPTS_DB', '/data/espscripts.sqlite3')
 
 
@@ -26,6 +27,7 @@ def connect():
     db.execute('PRAGMA foreign_keys=ON')
     db.execute('CREATE TABLE IF NOT EXISTS entries (id TEXT PRIMARY KEY, version INTEGER NOT NULL, document TEXT NOT NULL)')
     db.execute('CREATE TABLE IF NOT EXISTS revisions (entry_id TEXT NOT NULL, version INTEGER NOT NULL, document TEXT NOT NULL, PRIMARY KEY(entry_id, version))')
+    db.execute('CREATE TABLE IF NOT EXISTS catalog (id TEXT PRIMARY KEY, kind TEXT NOT NULL, version INTEGER NOT NULL, document TEXT NOT NULL)')
     db.commit()
     try:
         with db:
@@ -63,7 +65,7 @@ def validate_document(data):
         raise ValueError('Navn og YAML skal udfyldes.')
     result['kind'] = data.get('kind', 'block')
     result['status'] = data.get('status', 'untested')
-    if result['kind'] not in ('block', 'complete') or result['status'] not in ('untested', 'tested', 'issues'):
+    if result['kind'] not in ('block', 'complete', 'standard') or result['status'] not in ('untested', 'tested', 'issues'):
         raise ValueError('Ugyldig type eller teststatus.')
     if result['status'] == 'tested' and not result['tested_on']:
         raise ValueError('Angiv hvad opsætningen er testet på, og gerne dato.')
@@ -185,12 +187,76 @@ def history(entry_id):
     return jsonify([json.loads(row['document']) for row in rows])
 
 
+
+def validate_catalog_item(data):
+    if not isinstance(data, dict) or data.get('kind') not in ('boards', 'sensors'):
+        raise ValueError('Vælg board eller sensor.')
+    result = {'kind': data['kind']}
+    for key in ('name', 'category', 'detail', 'docs_url'):
+        value = data.get(key, '')
+        if not isinstance(value, str) or len(value) > 500:
+            raise ValueError('Katalogfelter må højst være 500 tegn.')
+        result[key] = value.strip()
+    if not result['name']:
+        raise ValueError('Angiv et navn.')
+    if ',' in result['name']:
+        raise ValueError('Brug et navn uden komma, så sensorvalg kan gemmes entydigt.')
+    if result['docs_url']:
+        from urllib.parse import urlsplit
+        url = urlsplit(result['docs_url'])
+        if url.scheme != 'https' or not url.netloc or url.username or url.password:
+            raise ValueError('Dokumentationslink skal være en HTTPS-adresse uden loginoplysninger.')
+    return result
+
+
+def save_catalog_item(db, data, item_id=None):
+    item = validate_catalog_item(data)
+    old = db.execute('SELECT * FROM catalog WHERE id=?', (item_id,)).fetchone() if item_id else None
+    if item_id and not old:
+        from werkzeug.exceptions import NotFound
+        raise NotFound('Egne katalogpost findes ikke. Standardkataloget kan ikke ændres.')
+    if old and data.get('version') != old['version']:
+        from werkzeug.exceptions import Conflict
+        raise Conflict('Katalogposten er ændret. Genindlæs siden.')
+    others = [json.loads(r['document']) for r in db.execute('SELECT document FROM catalog WHERE kind=?', (item['kind'],))]
+    if any(x['name'].casefold() == item['name'].casefold() and x['id'] != item_id for x in BUILTIN_CATALOG[item['kind']] + others):
+        from werkzeug.exceptions import Conflict
+        raise Conflict('Navnet findes allerede i kataloget.')
+    item.update(id=item_id or 'custom-' + str(uuid4()), version=old['version'] + 1 if old else 1, custom=True)
+    db.execute('INSERT OR REPLACE INTO catalog VALUES (?,?,?,?)', (item['id'], item['kind'], item['version'], json.dumps(item, ensure_ascii=False)))
+    return item
+
+
+@app.get('/api/catalog')
+def catalog():
+    with connect() as db:
+        custom = [json.loads(r['document']) for r in db.execute('SELECT document FROM catalog')]
+    return jsonify(**{kind: [dict(x, custom=False) for x in BUILTIN_CATALOG[kind]] + [x for x in custom if x['kind'] == kind] for kind in ('boards', 'sensors')})
+
+
+@app.post('/api/catalog')
+def add_catalog_item():
+    with connect() as db:
+        db.execute('BEGIN IMMEDIATE')
+        item = save_catalog_item(db, request.get_json())
+    return jsonify(item), 201
+
+
+@app.put('/api/catalog/<item_id>')
+def edit_catalog_item(item_id):
+    with connect() as db:
+        db.execute('BEGIN IMMEDIATE')
+        item = save_catalog_item(db, request.get_json(), item_id)
+    return jsonify(item)
+
+
 @app.get('/api/backup')
 def backup():
     with connect() as db:
         entries = [json.loads(r['document']) for r in db.execute('SELECT document FROM entries')]
         revisions = [json.loads(r['document']) for r in db.execute('SELECT document FROM revisions')]
-    response = jsonify(format='espscripts', schema=1, entries=entries, revisions=revisions)
+        custom = [json.loads(r['document']) for r in db.execute('SELECT document FROM catalog')]
+    response = jsonify(format='espscripts', schema=2, entries=entries, revisions=revisions, catalog=custom)
     response.headers['Content-Disposition'] = 'attachment; filename="espscripts-backup.json"'
     return response
 
@@ -198,11 +264,16 @@ def backup():
 @app.post('/api/import')
 def import_backup():
     data = request.get_json()
-    if not isinstance(data, dict) or data.get('format') != 'espscripts' or data.get('schema') != 1:
+    if not isinstance(data, dict) or data.get('format') != 'espscripts' or data.get('schema') not in (1, 2):
         raise ValueError('Filen er ikke en ESPScripts-backup.')
     entries, revisions = data.get('entries'), data.get('revisions')
     if not isinstance(entries, list) or not isinstance(revisions, list) or len(entries) > 1000 or len(revisions) > 20000:
         raise ValueError('Ugyldig eller for stor backup.')
+    custom = data.get('catalog', []) if data['schema'] == 2 else []
+    if not isinstance(custom, list) or len(custom) > 2000:
+        raise ValueError('Ugyldigt katalog i backup.')
+    for item in custom:
+        validate_catalog_item(item)
     # Import as copies with fresh identities, preserving history; never overwrite.
     with connect() as db:
         db.execute('BEGIN IMMEDIATE')
@@ -220,6 +291,10 @@ def import_backup():
             current = None
             for old in past:
                 current = persist(db, old, current['id'] if current else None, current['version'] if current else None, historical=True)
+        for item in custom:
+            existing = BUILTIN_CATALOG[item['kind']] + [json.loads(r['document']) for r in db.execute('SELECT document FROM catalog WHERE kind=?', (item['kind'],))]
+            if not any(x['name'].casefold() == item['name'].strip().casefold() for x in existing):
+                save_catalog_item(db, item)
     return jsonify(imported=len(entries)), 201
 
 

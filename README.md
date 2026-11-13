@@ -1,5 +1,7 @@
 # ESPScripts
 
+<img src="espscripts/logo.png" alt="ESPScripts" width="360">
+
 Et dansk bibliotek i Home Assistant til ESPHome YAML: find og genbrug sensorblokke og komplette ESP32-opsætninger med tilslutninger, testnoter og versionshistorik.
 
 ## Installation i Home Assistant
@@ -17,6 +19,45 @@ Kræver Home Assistant OS eller en installation med Supervisor. Understøtter am
 [Åbn tilføjelse af repository i Home Assistant](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FJRJenZens%2FESPScripts)
 
 Appen bruger Home Assistants Ingress og login. Ingen separat port eller adgangskode skal konfigureres. Biblioteket er fælles for HA-administratorer med adgang til appen; det har ikke separate brugerbiblioteker.
+
+## Nyt i 0.2.0
+
+- Grafisk værkstedsoversigt, hardwarekort og et guidet oprettelsesforløb med Hardware → YAML → Test og noter.
+- 211 boards og 200 sensorkomponenter i et indbygget katalog, som også virker uden internet. Søg på model, chipfamilie og komponent, og filtrér på familie, tilslutning eller egne tilføjelser.
+- Tilføj og redigér egne boards og sensorer. De gemmes lokalt og medtages i JSON-backup.
+- Vælg et board og flere sensorer, når du opretter en opsætning. Hardwarevalg organiserer opsætningen; de indsætter ikke automatisk sensorkode eller GPIO.
+- Standardprint med COMMON, fælles pakker, WireGuard og hardware. Tilpas enhedsnavn og secret-prefix til nye print, og gem egne grundskabeloner med historik.
+- Eget ikon og logo i HA-appbutikken og et layout til både computer og mobil.
+
+## Standardprint
+
+Åbn **Standardprint → Brug standardprint**. Indtast fx `esp32-019`, og vælg chip og flashstørrelse. Standardvalget er ESP32-C3, 4 MB og ESP-IDF. Generatoren laver automatisk visningsnavnet `ESP32-019` og prefixet `esp32_019`, medmindre du selv angiver andre værdier.
+
+Grundskabelonen indeholder:
+
+- `device_name` og `device_friendly_name`.
+- `device_secret: !secret "<prefix>_secret"` til din fælles opsætning.
+- `wg_private_key: !secret "<prefix>_wg_secret"` og `wg_address: !secret "<prefix>_wg_address"`.
+- `base: !include common/base.yaml` og `wireguard: !include common/wireguard.yaml`.
+- `esp32` med variant, flashstørrelse og ESP-IDF samt et afsluttende `logger:`-afsnit.
+
+De fælles pakkefiler og secret-værdier skal allerede findes i ESPHome. ESPScripts læser eller opretter dem ikke og installerer ikke firmware.
+
+Vælg **Tilpas som egen** for at redigere grundskabelonen og gemme et eget standardprint. De understøttede pladsholdere er `{{device_name}}`, `{{friendly_name}}`, `{{secret_prefix}}`, `{{variant}}` og `{{flash_size}}`; behold dobbelte anførselstegn omkring dem som i den indbyggede skabelon. `{{device_name}}` kræves for at bruge generatoren. Kun pladsholdere erstattes; faste værdier i en egen skabelon ændres ikke. De nye enheder starter med status **Ikke testet**.
+
+Under **Ny opsætning → Hardware → Start fra standardprint** kan du også indsætte den indbyggede grundskabelon i en kladde. Har du valgt et kendt katalogboard, foreslås chipvarianten fra dets metadata; kontrollér selv flashstørrelsen. Eksisterende YAML erstattes kun efter bekræftelse.
+
+## Hardwarekatalog
+
+Standardkataloget ligger i [`espscripts/catalog.json`](espscripts/catalog.json) i dette repository. Det er et udvalgt snapshot fra ESPHome-kataloget via HA den 13. november 2026, ikke en komplet eller løbende synkroniseret oversigt. Board- og sensorillustrationerne er generiske symboler, ikke produktspecifikke billeder eller pinout-tegninger. Komponenternes dokumentationslinks er vedlagt i kataloget.
+
+Egne modeller tilføjes under **Boards** eller **Sensorer** med navn, familie/tilslutning, board-ID/komponent og eventuelt et HTTPS-link. Standardkataloget følger appopdateringer; egne tilføjelser ligger i den vedvarende database. Katalogposter bekræfter ikke, at en kombination er fysisk testet. Teststatus ligger på dine opsætninger.
+
+## Opdatering fra 0.1.0
+
+Tag backup, genindlæs appbutikken, og opdatér ESPScripts til 0.2.0. Den eksisterende database og opsætninger bevares; katalogtabellen oprettes automatisk. Gamle JSON-backupfiler kan stadig importeres. Nye backupfiler anvender formatversion 2 og indeholder egne katalogposter; katalogposter med samme navn og type som eksisterende poster springes over ved import.
+
+Ikon og logo er med i appmappen som `icon.png` og `logo.png`, jf. [HA's vejledning](https://contributors.home-assistant.io/apps/guides/presentation/). Hvis appbutikken viser det gamle ikon, genindlæs repository og siden. Sidepanelet bruger fortsat HA's `mdi:chip`-ikon.
 
 ## Funktioner
 
@@ -37,7 +78,7 @@ Start med **Importér YAML** fra en konfiguration, du allerede har. Angiv board,
 
 Når du genbruger en opsætning, vælg **Gem som kopi**, tilpas navn, GPIO og øvrige værdier, og kopiér eller hent YAML til ESPHome Device Builder. En sensorblok kan indsættes i din konfiguration eller gemmes som en ESPHome-pakkefil. Biblioteket sammensætter ikke automatisk flere YAML-blokke.
 
-**Syntakskontrol er ikke ESPHome-validering.** ESPScripts kontrollerer, at YAML kan læses som en mapping, og understøtter ESPHome-tags som `!secret`, `!include` og `!lambda`. Koden køres ikke. Board-understøttelse, komponenter, GPIO-konflikter og elektriske forhold skal kontrolleres i ESPHome og på hardwaren. YAML-ankre og aliaser understøttes ikke i version 0.1.
+**Syntakskontrol er ikke ESPHome-validering.** ESPScripts kontrollerer, at YAML kan læses som en mapping, og understøtter ESPHome-tags som `!secret`, `!include` og `!lambda`. Koden køres ikke. Board-understøttelse, komponenter, GPIO-konflikter og elektriske forhold skal kontrolleres i ESPHome og på hardwaren. YAML-ankre og aliaser understøttes ikke.
 
 ## Data og backup
 
@@ -60,7 +101,7 @@ ESPSCRIPTS_LOCAL=1 ESPSCRIPTS_DB=./library.sqlite3 .venv/bin/python espscripts/a
 
 Åbn `http://127.0.0.1:8099`. `ESPSCRIPTS_LOCAL=1` er kun til lokal udvikling: produktionsappen tillader kun Ingress-proxyen på `172.30.32.2`, og appens konfiguration eksponerer ingen værtsport.
 
-De lokale tests dækker lagring, versionshistorik, backup, YAML-kontrol, adgangskontrol og samtidige ændringer. Browserkontrol dækker oprettelse, genåbning, søgning og historik. Docker er ikke tilgængelig i udviklingsmiljøet, så containerbygning, installation og Ingress skal afprøves på en rigtig HA-installation. GitHub-workflows er ikke aktiveret i denne udgave.
+De lokale tests dækker lagring, versionshistorik, backup, YAML-kontrol, adgangskontrol og samtidige ændringer. Browserkontrol dækker oprettelse, hardwarevalg, katalogtilføjelser, søgning og standardprint-generatoren, inklusive lagring og egne skabeloner. Mobil- og desktoplayout er visuelt kontrolleret. Docker er ikke tilgængelig i udviklingsmiljøet, så containerbygning, installation og Ingress skal afprøves på en rigtig HA-installation. GitHub-workflows er ikke aktiveret i denne udgave.
 
 ## Dokumentation
 
